@@ -1,0 +1,1063 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><meta name="keywords" content="VideoPlayer,fl.video.VideoPlayer,ACTIONSCRIPT,ALL,AUTO_LAYOUT,AUTO_REWOUND,BOTTOM,BOTTOM_LEFT,BOTTOM_RIGHT,BUFFERING,BUFFERING_STATE_ENTERED,CENTER,CLOSE,COMPLETE,CONNECTION_ERROR,CUE_POINT,DEFAULT_TIMEOUT,DELETE_DEFAULT_PLAYER,DISCONNECTED,DVR_ERROR,DVR_EVENT,DVR_STOP,EVENT,EXACT_FIT,FAST_FORWARD,FLV,ILLEGAL_CUE_POINT,INCMANAGER_CLASS_UNSET,INVALID_SEEK,INVALID_SOURCE,INVALID_XML,LAYOUT,LEFT,LOADING,MAINTAIN_ASPECT_RATIO,METADATA_RECEIVED,MISSING_SKIN_STYLE,NAVIGATION,NETSTREAM_CLIENT_CLASS_UNSET,NO_BITRATE_MATCH,NO_CONNECTION,NO_SCALE,NULL_URL_LOAD,PAUSED,PAUSED_STATE_ENTERED,PLAYHEAD_UPDATE,PLAYING,PLAYING_STATE_ENTERED,PROGRESS,READY,RESIZING,REWIND,REWINDING,RIGHT,SCRUB_FINISH,SCRUB_START,SEEKED,SEEKING,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SKIN_ERROR,SKIN_LOADED,SOUND_UPDATE,STATE_BUFFERING,STATE_CHANGE,STATE_PAUSED,STATE_PLAYING,STATE_STOPPED,STOPPED,STOPPED_STATE_ENTERED,TOP,TOP_LEFT,TOP_RIGHT,UNSUPPORTED_PLAYER_VERSION,UNSUPPORTED_PROPERTY,VERSION,VERSION,VERSION,VERSION,VERSION,VERSION,activeVideoPlayerIndex,aggressiveModeBufferLength,align,align,autoPlay,autoRewind,autoRewind,backButton,bitrate,bitrate,bitrate,bufferTime,bufferTime,buffering,bufferingBar,bufferingBarHidesAndDisablesOthers,bytesLoaded,bytesLoaded,bytesTotal,bytesTotal,code,codecs,codecs,cuePoints,currentDuration,currentStreamBitRate,currentStreamName,dataStreamAccess,dataStreamAccess,droppedFramesLockDelay,dvr,dvrFixedDuration,dvrFixedDuration,dvrIncrement,dvrIncrement,dvrIncrementVariance,dvrIncrementVariance,dvrSnapToLive,dvrSnapToLive,dynamicStreaming,dynamicStreaming,endTabIndex,fallbackServerName,forwardButton,fullScreenBackgroundColor,fullScreenButton,fullScreenSkinDelay,fullScreenTakeOver,height,height,iNCManagerClass,idleTimeout,idleTimeout,info,isDVR,isDVR,isDynamicStream,isDynamicStream,isLive,isLive,isRTMP,isRTMP,isRTMP,isRTMP,isRec,maxBandwidth,metadata,metadata,metadataLoaded,muteButton,nc,ncMgr,ncMgr,netConnection,netConnection,netConnection,netStream,netStreamClientClass,offline,offset,oldBounds,oldRegistrationBounds,pauseButton,paused,playButton,playPauseButton,playheadPercentage,playheadTime,playheadTime,playheadTime,playheadUpdateInterval,playheadUpdateInterval,playing,preferredBufferLength,preferredHeight,preferredWidth,preview,progressInterval,progressInterval,progressive,qosSupport,registrationHeight,registrationHeight,registrationWidth,registrationWidth,registrationX,registrationX,registrationY,registrationY,rtmfp,rtmpe,scaleMode,scaleMode,scaleX,scaleX,scaleY,scaleY,scrubbing,seekBar,seekBarInterval,seekBarScrubTolerance,seekToPrevOffset,skin,skinAutoHide,skinBackgroundAlpha,skinBackgroundColor,skinFadeTime,skinScaleMaximum,soundTransform,soundTransform,soundTransform,source,source,startBufferLength,startTabIndex,state,state,state,stateResponsive,stateResponsive,stopButton,stopped,streamHeight,streamHeight,streamLength,streamLength,streamLength,streamLength,streamName,streamName,streamWidth,streamWidth,streams,streams,streams,swfVerification,switchQOSTimerDelay,timeout,timeout,totalDuration,totalTime,totalTime,type,version,version,videoHeight,videoPlayer,videoPlayer,videoWidth,visible,visibleVideoPlayerIndex,volume,volume,volumeBar,volumeBarInterval,volumeBarScrubTolerance,vp,vp,vp,vp,vp,width,width,x,x,y,y,_playDynamicStream,addASCuePoint,addStream,assignTabIndexes,bringVideoPlayerToFront,checkInterval,close,close,close,closeVideoPlayer,connectAgain,connectAgain,connectDynamicStream,connectDynamicStream,connectToURL,connectToURL,enterFullScreenDisplayState,findCuePoint,findNearestCuePoint,findNextCuePointWithName,getProperty,getProperty,getStreamDuration,getVideoPlayer,handleDVRError,helperDone,helperDone,isFLVCuePointEnabled,load,load,manualSwitchMode,ncConnected,ncReconnected,onMetaData,onPlayStatus,pause,pause,play,play,play,play2,play2,play2,playWhenEnoughDownloaded,playWhenEnoughDownloaded,reconnect,reconnect,removeASCuePoint,seek,seek,seekPercent,seekSeconds,seekToNavCuePoint,seekToNextNavCuePoint,seekToPrevNavCuePoint,setBandwidthLimit,setFLVCuePointEnabled,setProperty,setProperty,setScale,setScale,setSize,setSize,startPlay,stop,stop,switchDown,switchToStreamName,switchToStreamRate,switchUp"><title>fl.video.VideoPlayer</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'VideoPlayer - API Documentation';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?fl/video/VideoPlayer.html&amp;fl/video/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">VideoPlayer</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("VideoPlayer"); titleBar_setSubNav(true,true,false	,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">fl.video</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  VideoPlayer</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">VideoPlayer  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.media.Video</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p></p>
+	 The VideoPlayer class lets you create a video player with a slightly smaller SWF file
+	 than if you used the FLVPlayback component. Unlike the FLVPlayback component, the 
+	 VideoPlayer class does not let you include a skin or playback controls, and although 
+	 you cannot find or seek to cue points, the <code>cuePoint</code> events occur. 
+	 
+     <p>The FLVPlayback class wraps the VideoPlayer class. Use the FLVPlayback class in almost all cases because there is no 
+	 functionality in the VideoPlayer class that cannot be accessed using the 
+	 FLVPlayback class.</p>
+	 
+	              <p>In version 2.5, the FLVPlayback class implements the default NCManager 
+	 interface to access streaming FLV files on Flash Media Server. You interact with 
+	 NCManager when you set the <code>contentPath</code> property and when you pass 
+	 a URL to the <code>play()</code> and <code>load()</code> methods. If you use the 
+	 VideoPlayer class by itself, however, 
+	 you must include the following statement in your ActionScript code   :</p>
+	 
+	              <div class="listing"><pre>var _forceNCManager:fl.video.NCManager;</pre></div>
+	 
+	              <p>The NCManager class implements an interface, INCManager, and it can be replaced
+	 with a custom class for managing network communications that implements this interface.
+	 If you do that, you also need to include the following statement, replacing NCManager 
+	 with the name of the class you have provided:</p>
+	 
+	              <div class="listing"><pre>fl.video.VideoPlayer.iNCManagerClass = fl.video.NCManager;</pre></div>
+	 
+	              <p>You do not need to add this statement if you are using the default NCManager class.</p>
+	 
+               <p>
+                  <b>Note</b>: You also can set <code>iNCManagerClass</code> to replace the default 
+	 fl.video.NCManager when using the FLVPlayback component.</p>
+	 
+	              <p>To handle multiple streams for multiple bandwidths, NCManager supports a subset of 
+	 SMIL.</p>
+	 	         <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="NCManager.html" target="">NCManager</a><br/><a href="FLVPlayback.html" target="">FLVPlayback</a></div><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#align" class="signatureLink">align</a> : String<div class="summaryTableDescription">
+		 Specifies how the video is displayed relative to the
+		 registrationX, registrationY,
+		 registrationWidth and
+		 registrationHeight properties.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#autoRewind" class="signatureLink">autoRewind</a> : Boolean<div class="summaryTableDescription">
+		 A Boolean value that, if true, causes the FLV file to rewind to 
+		 Frame 1 when play stops, either because the player reached the end of the 
+		 stream or the stop() method was called.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bufferTime" class="signatureLink">bufferTime</a> : Number<div class="summaryTableDescription">
+		 A number that specifies the number of seconds to buffer in memory before 
+		 beginning to play a video stream.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bytesLoaded" class="signatureLink">bytesLoaded</a> : uint<div class="summaryTableDescription">[read-only] 
+		 A number that indicates the extent of downloading, in number of bytes, for an 
+		 HTTP download.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bytesTotal" class="signatureLink">bytesTotal</a> : uint<div class="summaryTableDescription">[read-only] 
+		 A number that specifies the total number of bytes downloaded for an HTTP download.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#dvrFixedDuration" class="signatureLink">dvrFixedDuration</a> : Boolean<div class="summaryTableDescription">
+		 In the event a DVR stream may run beyond the total duration defined
+		 by Flash Media Server, enabling the dvrFixedDuration will force it to
+		 stop playing when the total duration is reached.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#dvrIncrement" class="signatureLink">dvrIncrement</a> : Number<div class="summaryTableDescription">
+		 This property is the amount of seconds that the VideoPlayer will append
+		 to an ongoing live stream when it is being watched in DVR mode.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#dvrIncrementVariance" class="signatureLink">dvrIncrementVariance</a> : Number<div class="summaryTableDescription">
+		 The difference threshold, in seconds, between the current duration
+		 and total duration of a DVR stream.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#dvrSnapToLive" class="signatureLink">dvrSnapToLive</a> : Boolean<div class="summaryTableDescription">
+		 When a DVR stream is played it will by default begin playing at the beginning
+		 of the stream recording.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#height" class="signatureLink">height</a> : Number<div class="summaryTableDescription">[write-only] 
+		 A number that specifies the height of the VideoPlayer instance (in pixels).</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#idleTimeout" class="signatureLink">idleTimeout</a> : Number<div class="summaryTableDescription">
+		 The amount of time, in milliseconds, before Flash terminates an idle connection 
+		 to a video server, such as Flash Media Server, because playing paused or stopped.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#iNCManagerClass" class="signatureLink">iNCManagerClass</a> : Object = fl.video.NCManagerDynamicStream<div class="summaryTableDescription">[static] 
+		 To make all VideoPlayer objects use your 
+		 custom class as the default INCManager implementation, set the 
+		 iNCManagerClass property to the class object or string name
+		 of your custom class.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isDVR" class="signatureLink">isDVR</a> : Boolean<div class="summaryTableDescription">
+		 A Boolean value that enables the DVR functionality when a live stream is
+		 being recorded by Flash Media Server.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isLive" class="signatureLink">isLive</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 A Boolean value that is true if the video stream is live.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isRTMP" class="signatureLink">isRTMP</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 A Boolean value that is true if the FLV file is streaming from Flash Media Server (FMS) using RTMP.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#metadata" class="signatureLink">metadata</a> : Object<div class="summaryTableDescription">[read-only] 
+         An object that is a metadata information packet that is received from a call to 
+		 the NetSteam.onMetaData() callback method, if available.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ncMgr" class="signatureLink">ncMgr</a> : <a href="../../fl/video/INCManager.html">INCManager</a><div class="summaryTableDescription">[read-only] 
+		 An INCManager object that provides access to an instance of the class implementing 
+		 INCManager, which is an interface to the NCManager class.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#netConnection" class="signatureLink">netConnection</a> : NetConnection<div class="summaryTableDescription">[read-only] 
+		 Allows direct access to the NetConnection instance created by the video player.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#netStream" class="signatureLink">netStream</a> : NetStream<div class="summaryTableDescription">[read-only] 
+		 Allows direct access to the NetStream instance created by the video player.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#netStreamClientClass" class="signatureLink">netStreamClientClass</a> : Object<div class="summaryTableDescription">[static] 
+	Registers a custom class for the NetStream's client property.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#playheadTime" class="signatureLink">playheadTime</a> : Number<div class="summaryTableDescription">
+		 A number that is the current playhead time or position, measured in seconds, 
+		 which can be a fractional value.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#playheadUpdateInterval" class="signatureLink">playheadUpdateInterval</a> : Number<div class="summaryTableDescription">
+		 A number that is the amount of time, in milliseconds, between each 
+		 playheadUpdate event.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#progressInterval" class="signatureLink">progressInterval</a> : Number<div class="summaryTableDescription">
+		 A number that is the amount of time, in milliseconds, between each 
+		 progress event.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#registrationHeight" class="signatureLink">registrationHeight</a> : Number<div class="summaryTableDescription">
+		 The height used to align the video content when autoresizing.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#registrationWidth" class="signatureLink">registrationWidth</a> : Number<div class="summaryTableDescription">
+		 The width used to align the video content when autoresizing.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#registrationX" class="signatureLink">registrationX</a> : Number<div class="summaryTableDescription">
+		 The x coordinate used to align the video content when 
+		 autoresizing.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#registrationY" class="signatureLink">registrationY</a> : Number<div class="summaryTableDescription">
+		 The y coordinate used to align the video content when 
+		 autoresizing.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#scaleMode" class="signatureLink">scaleMode</a> : String<div class="summaryTableDescription">
+		 Specifies how the video resizes after loading.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#scaleX" class="signatureLink">scaleX</a> : Number<div class="summaryTableDescription">[write-only] 
+		 A number that is the horizontal scale.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#scaleY" class="signatureLink">scaleY</a> : Number<div class="summaryTableDescription">[write-only] 
+		 A number that is the vertical scale.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#soundTransform" class="signatureLink">soundTransform</a> : SoundTransform<div class="summaryTableDescription">
+		 Provides direct access to the
+		 NetStream.soundTransform property to expose
+		 more sound control.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#source" class="signatureLink">source</a> : String<div class="summaryTableDescription">[read-only] 
+		 A string that specifies the URL of the FLV file to stream and how to stream it.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#state" class="signatureLink">state</a> : String<div class="summaryTableDescription">[read-only] 
+		 A string that specifies the state of the component.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#stateResponsive" class="signatureLink">stateResponsive</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 A Boolean value that is true if the state is responsive.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#totalTime" class="signatureLink">totalTime</a> : Number<div class="summaryTableDescription">[read-only] 
+		 A number that is the total playing time for the video in seconds.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#videoHeight" class="signatureLink">videoHeight</a> : int<div class="summaryTableDescription">[read-only] 
+		 The source width of the loaded FLV file.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#videoWidth" class="signatureLink">videoWidth</a> : int<div class="summaryTableDescription">[read-only] 
+		 The source width of the loaded FLV file.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#visible" class="signatureLink">visible</a> : Boolean<div class="summaryTableDescription">
+		 A Boolean value that, if true, makes the VideoPlayer instance visible.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#volume" class="signatureLink">volume</a> : Number<div class="summaryTableDescription">
+		 A number in the range of 0 to 1 that indicates the volume control setting.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#width" class="signatureLink">width</a> : Number<div class="summaryTableDescription">[write-only] 
+		 A number that specifies the width of the VideoPlayer instance on the Stage.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#x" class="signatureLink">x</a> : Number<div class="summaryTableDescription">[write-only] 
+		 A number that specifies the horizontal position (in pixels) of the video player.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#y" class="signatureLink">y</a> : Number<div class="summaryTableDescription">[write-only] 
+		 A number that specifies the vertical position (in pixels) of the video player.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#VideoPlayer()" class="signatureLink">VideoPlayer</a>(width:int = 320, height:int = 240)</div><div class="summaryTableDescription">
+		 Creates a VideoPlayer object with a specified width and height.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#close()" class="signatureLink">close</a>():void</div><div class="summaryTableDescription">
+		 Forces the video stream and Flash Media Server connection to close.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#load()" class="signatureLink">load</a>(url:String, totalTime:Number, isLive:Boolean = false):void</div><div class="summaryTableDescription">
+		 Similar to the play() method, but causes the FLV file 
+		 to load without playing.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#ncConnected()" class="signatureLink">ncConnected</a>():void</div><div class="summaryTableDescription">
+		 Called by INCManager after the connection is complete or failed after a call to the
+		 INCManager.connectToURL() method.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#ncReconnected()" class="signatureLink">ncReconnected</a>():void</div><div class="summaryTableDescription">
+		 Called by INCManager after the reconnection is complete or has failed after a call to
+		 the INCManager.reconnect() method.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#pause()" class="signatureLink">pause</a>():void</div><div class="summaryTableDescription">
+		 Pauses video playback.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#play()" class="signatureLink">play</a>(url:String = null, totalTime:Number, isLive:Boolean = false):void</div><div class="summaryTableDescription">
+		 Causes the video to play.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#play2()" class="signatureLink">play2</a>(dsi:<a href="../../fl/video/DynamicStreamItem.html">DynamicStreamItem</a>):void</div><div class="summaryTableDescription">
+		 Plays a stream using the Dynamic Streaming feature.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#playWhenEnoughDownloaded()" class="signatureLink">playWhenEnoughDownloaded</a>():void</div><div class="summaryTableDescription">
+		 Plays the FLV file when enough of it has downloaded.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#seek()" class="signatureLink">seek</a>(time:Number):void</div><div class="summaryTableDescription">
+		 Seeks to a given time in the file, specified in seconds, with a precision of three
+		 decimal places (milliseconds).</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setScale()" class="signatureLink">setScale</a>(scaleX:Number, scaleY:Number):void</div><div class="summaryTableDescription">
+		 Sets the scaleX and scaleY properties simultaneously.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setSize()" class="signatureLink">setSize</a>(width:Number, height:Number):void</div><div class="summaryTableDescription">
+		 Sets the width and height properties simultaneously.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stop()" class="signatureLink">stop</a>():void</div><div class="summaryTableDescription">
+		 Stops video playback.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:autoRewound" class="signatureLink">autoRewound</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the playhead is moved to the start of the video player because the autoRewind property is set to true.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:close" class="signatureLink">close</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched by the VideoPlayer instance when it closes the NetConnection by timing out or through a call to the close() method, or when you call the load() or play() methods or set the source property and cause the RTMP connection to close as a result.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:complete" class="signatureLink">complete</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when playing completes because the player reached the end of the FLV file.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:cuePoint" class="signatureLink">cuePoint</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when a cue point is reached.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:layout" class="signatureLink">layout</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the video player is resized or laid out.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:metadataReceived" class="signatureLink">metadataReceived</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched the first time the FLV file's metadata is reached.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:playheadUpdate" class="signatureLink">playheadUpdate</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched while the FLV file is playing at the frequency specified by the playheadUpdateInterval property or when rewinding starts.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">Indicates progress made in number of bytes downloaded.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:ready" class="signatureLink">ready</a></div></td><td class="summaryTableDescription summaryTableCol">Event dispatched when an FLV file is loaded and ready to display.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:stateChange" class="signatureLink">stateChange</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the playback state changes.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:unsupportedPlayerVersion" class="signatureLink">unsupportedPlayerVersion</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the playback encounters an unsupported player feature.</td><td class="summaryTableOwnerCol">VideoPlayer</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#SHORT_VERSION" class="signatureLink">SHORT_VERSION</a> : String = 2.5<div class="summaryTableDescription">[static] 
+	State variable indicating the short version number of the component.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 2.5.0.6<div class="summaryTableDescription">[static] 
+	State variable indicating the long version number of the component.</div></td><td class="summaryTableOwnerCol">VideoPlayer</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="align"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">align</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>align:String</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Specifies how the video is displayed relative to the
+		 <code>registrationX</code>, <code>registrationY</code>,
+		 <code>registrationWidth</code> and
+		 <code>registrationHeight</code> properties. The <code>align</code> property does 
+		 this autolayout when the <code>scaleMode</code> property is set to
+		 <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code> or
+		 <code>VideoScaleMode.NO_SCALE</code>. Changing this property
+		 after an FLV file is loaded causes an automatic layout to
+		 start immediately.
+		 Values come
+		 from the VideoAlign class.
+                  </p><p> The default value is <code>VideoAlign.CENTER</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get align():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set align(value:String):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#registrationX" target="">registrationX</a><br/><a href="VideoPlayer.html#registrationY" target="">registrationY</a><br/><a href="VideoPlayer.html#registrationWidth" target="">registrationWidth</a><br/><a href="VideoPlayer.html#registrationHeight" target="">registrationHeight</a><br/><a href="VideoPlayer.html#scaleMode" target="">scaleMode</a><br/><a href="VideoAlign.html" target="">VideoAlign</a></div></div><a name="propertyDetail"></a><a name="autoRewind"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">autoRewind</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>autoRewind:Boolean</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A Boolean value that, if <code>true</code>, causes the FLV file to rewind to 
+		 Frame 1 when play stops, either because the player reached the end of the 
+		 stream or the <code>stop()</code> method was called. This property is 
+		 meaningless for live streams.
+         
+         </p><p> The default value is <code>false</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get autoRewind():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set autoRewind(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="bufferTime"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">bufferTime</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>bufferTime:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that specifies the number of seconds to buffer in memory before 
+		 beginning to play a video stream. For FLV files streaming over RTMP, 
+		 which are not downloaded and buffer only in memory, it can be important 
+		 to increase this setting from the default value of 0.1. For a progressively 
+		 downloaded FLV file over HTTP, there is little benefit to increasing this 
+		 value although it could improve viewing a high-quality video on an older, 
+		 slower computer.
+		 
+		 <p>For prerecorded (not live) video, do not set the <code>bufferTime</code> 
+         property to <code>0</code>; use the default buffer time or increase the buffer 
+         time.</p>
+		 
+		 <p>This property does not specify the amount of the FLV file to download before 
+		 starting playback.</p>
+		 
+         </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bufferTime():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set bufferTime(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="FLVPlayback.html#bufferTime" target="">FLVPlayback.bufferTime</a><br/><a href="VideoPlayer.html#isLive" target="">isLive</a></div></div><a name="propertyDetail"></a><a name="bytesLoaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">bytesLoaded</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>bytesLoaded:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that indicates the extent of downloading, in number of bytes, for an 
+		 HTTP download.  Returns 0 when there
+		 is no stream, when the stream is from Flash Media Server (FMS), or if the information
+		 is not yet available. The returned value is useful only for an HTTP download.
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesLoaded():uint</code><br/></div><a name="propertyDetail"></a><a name="bytesTotal"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">bytesTotal</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>bytesTotal:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that specifies the total number of bytes downloaded for an HTTP download.  
+		 Returns -1 when there is no stream, when the stream is from Flash Media Server (FMS), or if 
+		 the information is not yet available. The returned value is useful only 
+		 for an HTTP download. 
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesTotal():uint</code><br/></div><a name="propertyDetail"></a><a name="dvrFixedDuration"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dvrFixedDuration</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>dvrFixedDuration:Boolean</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 In the event a DVR stream may run beyond the total duration defined
+		 by Flash Media Server, enabling the dvrFixedDuration will force it to
+		 stop playing when the total duration is reached.  If disabled, the value
+		 of dvrIncrement will be appended to the end of the stream.  This property
+		 is ignored when the total duration is not given by Flash Media Server.
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dvrFixedDuration():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set dvrFixedDuration(value:Boolean):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#isDVR" target="">isDVR</a><br/><a href="VideoPlayer.html#dvrIncrement" target="">dvrIncrement</a><br/><a href="VideoPlayer.html#dvrIncrementVariance" target="">dvrIncrementVariance</a></div></div><a name="propertyDetail"></a><a name="dvrIncrement"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dvrIncrement</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>dvrIncrement:Number</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 This property is the amount of seconds that the VideoPlayer will append
+		 to an ongoing live stream when it is being watched in DVR mode.  If the total
+		 duration of the DVR stream is not made available from the server, the 
+		 VideoPlayer will continually append this value in minutes when the current 
+		 recorded duration is within the dvrIncrementVariance of the perpetual total
+		 duration of the stream.
+		  
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dvrIncrement():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set dvrIncrement(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#isDVR" target="">isDVR</a><br/><a href="VideoPlayer.html#dvrIncrementVariance" target="">dvrIncrementVariance</a></div></div><a name="propertyDetail"></a><a name="dvrIncrementVariance"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dvrIncrementVariance</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>dvrIncrementVariance:Number</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 The difference threshold, in seconds, between the current duration
+		 and total duration of a DVR stream.  When this value is reached, it will 
+		 trigger a call to Flash Media Server to return the current and total
+		 duration of a stream.  If the total duration of the stream is unknown,
+		 the component will append the value of the dvrIncrement to the current
+		 duration and call FMS again when the difference threshold is reached again.
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dvrIncrementVariance():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set dvrIncrementVariance(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#isDVR" target="">isDVR</a><br/><a href="VideoPlayer.html#dvrIncrement" target="">dvrIncrement</a></div></div><a name="propertyDetail"></a><a name="dvrSnapToLive"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dvrSnapToLive</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>dvrSnapToLive:Boolean</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 When a DVR stream is played it will by default begin playing at the beginning
+		 of the stream recording.  Enabling this will move the playhead of the stream
+		 to the latest live data produced by the server.
+		  
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dvrSnapToLive():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set dvrSnapToLive(value:Boolean):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#isDVR" target="">isDVR</a></div></div><a name="propertyDetail"></a><a name="height"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">height</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>height:Number</code>&nbsp;&nbsp;[write-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that specifies the height of the VideoPlayer instance (in pixels). 
+		 
+		 <p><b>Note</b>: Do not confuse this property with the 
+		 <code>flash.media.Video.height</code> property which is similar to the 
+		 <code>fl.video.VideoPlayer.videoHeight</code> property.</p>
+         		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set height(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso">setSize()<br/>Video.videoHeight<br/>VideoPlayer.videoHeight</div></div><a name="propertyDetail"></a><a name="idleTimeout"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">idleTimeout</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>idleTimeout:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 The amount of time, in milliseconds, before Flash terminates an idle connection 
+		 to a video server, such as Flash Media Server, because playing paused or stopped. 
+		 This property has no effect on an 
+		 FLV file downloading over HTTP.
+		 
+		 <p>If this property is set when a video stream is already idle, it restarts the 
+		 timeout period with the new value.</p>
+                  </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get idleTimeout():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set idleTimeout(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="iNCManagerClass"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">iNCManagerClass</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static var iNCManagerClass:Object = fl.video.NCManagerDynamicStream</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 To make all VideoPlayer objects use your 
+		 custom class as the default INCManager implementation, set the 
+		 <code>iNCManagerClass</code> property to the class object or string name
+		 of your custom class.
+		 The FLVPlayback class includes the definition
+		 of the custom class; the video player does not.
+		 
+		 </p><p> The default value is <code>"fl.video.NCManager" as a string</code>.</p></div><a name="propertyDetail"></a><a name="isDVR"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isDVR</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isDVR:Boolean</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  10.0.0.0</td></tr></table><p></p><p></p><p>
+		 A Boolean value that enables the DVR functionality when a live stream is
+		 being recorded by Flash Media Server.
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isDVR():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isDVR(value:Boolean):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#isDVR" target="">VideoPlayer.isDVR</a></div></div><a name="propertyDetail"></a><a name="isLive"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isLive</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isLive:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A Boolean value that is <code>true</code> if the video stream is live. This property 
+		 is effective only when streaming from a video server, such as Flash Media Server or other Flash Video Streaming Service. The value of this 
+		 property is ignored for an HTTP download.
+		 
+		 <p>Set the <code>isLive</code> property to <code>false</code> when sending a prerecorded video 
+		 stream to the video player and to <code>true</code> when sending real-time data 
+		 such as a live broadcast. For better performance when you set 
+		 the <code>isLive</code> property to <code>false</code>, do not set the 
+		 <code>bufferTime</code> property to <code>0</code>.</p>
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isLive():Boolean</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#bufferTime" target="">bufferTime</a><br/><a href="FLVPlayback.html#isLive" target="">FLVPlayback.isLive</a></div></div><a name="propertyDetail"></a><a name="isRTMP"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isRTMP</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isRTMP:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A Boolean value that is <code>true</code> if the FLV file is streaming from Flash Media Server (FMS) using RTMP. 
+		 Its value is <code>false</code> for any other FLV file source. 
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isRTMP():Boolean</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="FLVPlayback.html#isRTMP" target="">FLVPlayback.isRTMP</a></div></div><a name="propertyDetail"></a><a name="metadata"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">metadata</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>metadata:Object</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+         An object that is a metadata information packet that is received from a call to 
+		 the <code>NetSteam.onMetaData()</code> callback method, if available.  
+		 Ready when the <code>metadataReceived</code> event is dispatched.
+		 
+		 <p>If the FLV file is encoded with the Flash 8 encoder, the <code>metadata</code> 
+		 property contains the following information. Older FLV files contain 
+		 only the <code>height</code>, <code>width</code>, and <code>duration</code> values.</p>
+		 
+		 <table class="innertable" ><tr><th><b>Parameter</b></th><th><b>Description</b></th></tr><tr><td><code>canSeekToEnd</code></td><td>A Boolean value that is <code>true</code> if the FLV file is encoded with a keyframe on the last frame that allows seeking to the end of a progressive download movie clip. It is <code>false</code> if the FLV file is not encoded with a keyframe on the last frame.</td></tr><tr><td><code>cuePoints</code></td><td>An array of objects, one for each cue point embedded in the FLV file. Value is undefined if the FLV file does not contain any cue points. Each object has the following properties:
+	       	
+		 			<ul>
+		 				<li><code>type</code>&mdash;A string that specifies the type of cue point as either "navigation" or "event".</li>
+		 				<li><code>name</code>&mdash;A string that is the name of the cue point.</li>
+		 				<li><code>time</code>&mdash;A number that is the time of the cue point in seconds with a precision of three decimal places (milliseconds).</li>
+		 				<li><code>parameters</code>&mdash;An optional object that has name-value pairs that are designated by the user when creating the cue points.</li>
+		 			</ul>
+		 		</td></tr><tr><td><code>audiocodecid</code></td><td>A number that indicates the audio codec (code/decode technique) that was used.</td></tr><tr><td><code>audiodelay</code></td><td> A number that represents time <code>0</code> in the source file from which the FLV file was encoded. 
+		 <p>Video content is delayed for the short period of time that is required to synchronize the audio. For example, if the <code>audiodelay</code> value is <code>.038</code>, the video that started at time <code>0</code> in the source file starts at time <code>.038</code> in the FLV file.</p> 
+		 <p>Note that the FLVPlayback and VideoPlayer classes compensate for this delay in their time settings. This means that you can continue to use the time settings that you used in your the source file.</p>
+</td></tr><tr><td><code>audiodatarate</code></td><td>A number that is the kilobytes per second of audio.</td></tr><tr><td><code>videocodecid</code></td><td>A number that is the codec version that was used to encode the video.</td></tr><tr><td><code>framerate</code></td><td>A number that is the frame rate of the FLV file.</td></tr><tr><td><code>videodatarate</code></td><td>A number that is the video data rate of the FLV file.</td></tr><tr><td><code>height</code></td><td>A number that is the height of the FLV file.</td></tr><tr><td><code>width</code></td><td>A number that is the width of the FLV file.</td></tr><tr><td><code>duration</code></td><td>A number that specifies the duration of the FLV file in seconds.</td></tr></table>
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get metadata():Object</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="FLVPlayback.html#metadata" target="">FLVPlayback.metadata</a><br/><a href="VideoPlayer.html#load()" target="">load()</a><br/><a href="VideoPlayer.html#play()" target="">play()</a></div></div><a name="propertyDetail"></a><a name="ncMgr"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ncMgr</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>ncMgr:<a href="../../fl/video/INCManager.html">INCManager</a></code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 An INCManager object that provides access to an instance of the class implementing 
+		 <code>INCManager</code>, which is an interface to the NCManager class.
+		 
+		 <p>You can use this property to implement a custom INCManager that requires 
+		 custom initialization.</p>
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get ncMgr():<a href="../../fl/video/INCManager.html">INCManager</a></code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="FLVPlayback.html#ncMgr" target="">FLVPlayback.ncMgr</a></div></div><a name="propertyDetail"></a><a name="netConnection"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">netConnection</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>netConnection:NetConnection</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Allows direct access to the NetConnection instance created by the video player.  
+                  </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get netConnection():NetConnection</code><br/></div><a name="propertyDetail"></a><a name="netStream"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">netStream</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>netStream:NetStream</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Allows direct access to the NetStream instance created by the video player.
+                  </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get netStream():NetStream</code><br/></div><a name="propertyDetail"></a><a name="netStreamClientClass"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">netStreamClientClass</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static var netStreamClientClass:Object</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.115.0</td></tr></table><p></p><p></p><p>
+	Registers a custom class for the NetStream's client property. 
+	By default, <code>fl.video.VideoPlayerClient</code> is used; this class handles the <code>onMetaData()</code> and <code>onCuePoint()</code> messages. 
+	To add custom handling for other messages, such as <code>onImageData()</code> and <code>onTextData()</code>, 
+	you can create your own class and set this property to the class.
+		<p>The constructor for the class must take a <code>VideoPlayer</code> instance as its only parameter, and it must have a Boolean ready property. 
+	This property should be <code>false</code> while the Client is still waiting for any data messages expected at the beginning of the file. 
+	If the VideoPlayer does its resize autorewind before these messages are received, they may never be received. 
+	By default, <code>fl.video.VideoPlayerClient</code> will return <code>true</code> from the ready property as soon as <code>onMetaData()</code> is called.</p>
+	
+	<p>You can set the property to the class object itself (as in the example below) or the string name of the class:</p>
+	<div class="listing"><pre>
+        import fl.video.
+        VideoPlayer.netStreamClientClass = MyCustomClient;
+        </pre></div>
+        <p>Note that setting it to the string name of the class is not enough by itself to force the class to be compiled into the SWF. 
+	The default value is the class object <code>fl.video.VideoPlayerClient</code>, not the string name.</p>
+	<p>It is strongly recommended that any custom implementation should subclass <code>fl.video.VideoPlayer</code>. 
+	To do otherwise risks breaking the metadata and cue point handling built into the VideoPlayer and the FLVPlayback component.</p>
+	           </p><p> The default value is <code>fl.video.VideoPlayerClient</code>.</p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../fl/video/VideoError.html">VideoError</a> </code> &mdash; If this property is set to an invalid value, <code>VideoError.NETSTREAM_CLIENT_CLASS_UNSET</code> will be thrown.
+   </td></tr></table></div><a name="propertyDetail"></a><a name="playheadTime"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">playheadTime</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>playheadTime:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that is the current playhead time or position, measured in seconds, 
+		 which can be a fractional value. Setting this property triggers a seek and 
+		 has all the restrictions of a seek.
+		 
+		 <p>When the playhead time changes, which includes once every .25 seconds 
+		 while the FLV file plays, the component dispatches the <code>playheadUpdate</code>
+		 event.</p>
+		 
+		 <p>For several reasons, the <code>playheadTime</code> property might not have the expected 
+		 value immediately after calling one of the seek methods or setting <code>playheadTime</code> 
+		 to cause seeking. First, for a progressive download, you can seek only to a 
+		 keyframe, so a seek takes you to the time of the first keyframe after the 
+		 specified time. (When streaming, a seek always goes to the precise specified 
+		 time even if the source FLV file doesn't have a keyframe there.) Second, 
+		 seeking is asynchronous, so if you call a seek method or set the 
+		 playheadTime property, <code>playheadTime</code> does not update immediately. 
+		 To obtain the time after the seek is complete, listen for the <code>seek</code> event, 
+		 which does not fire until the <code>playheadTime</code> property has updated.</p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get playheadTime():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set playheadTime(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#seek()" target="">seek()</a><br/><a href="FLVPlayback.html#playheadTime" target="">FLVPlayback.playheadTime</a></div></div><a name="propertyDetail"></a><a name="playheadUpdateInterval"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">playheadUpdateInterval</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>playheadUpdateInterval:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that is the amount of time, in milliseconds, between each 
+		 <code>playheadUpdate</code> event. Setting this property while the FLV file is 
+		 playing restarts the timer. 
+		 
+		 <p>Because ActionScript cue points start on playhead updates, lowering 
+		 the value of the <code>playheadUpdateInterval</code> property can increase the accuracy 
+		 of ActionScript cue points.</p>
+		 
+		 <p>Because the playhead update interval is set by a call to the global 
+		 <code>setInterval()</code> method, the update cannot fire more frequently than the 
+		 SWF file frame rate, as with any interval that is set this way. 
+		 So, as an example, for the default frame rate of 12 frames per second, 
+		 the lowest effective interval that you can create is approximately 
+		 83 milliseconds, or one second (1000 milliseconds) divided by 12.</p>
+		          </p><p> The default value is <code>250</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get playheadUpdateInterval():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set playheadUpdateInterval(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="FLVPlayback.html#playheadUpdateInterval" target="">FLVPlayback.playheadUpdateInterval</a></div></div><a name="propertyDetail"></a><a name="progressInterval"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">progressInterval</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>progressInterval:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that is the amount of time, in milliseconds, between each 
+		 <code>progress</code> event. If you set this property while the video 
+		 stream is playing, the timer restarts. 
+                  </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get progressInterval():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set progressInterval(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="registrationHeight"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registrationHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>registrationHeight:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 The height used to align the video content when autoresizing.
+		 Do not confuse the <code>registrationHeight</code> property 
+		 with the <code>height</code> property. The <code>height</code>
+		 property reflects the actual height of the video content.
+		 		 <p>Example 1, load an 80x80 FLV file with the following settings:
+		 <ul>
+		 <li><code>registrationX</code> = 100</li> 
+		 <li><code>registrationY</code> = 100</li>
+		 <li><code>registrationWidth</code> = 60</li> 
+		 <li><code>registrationHeight</code> = 40</li>
+		 <li><code>align</code> = <code>VideoAlign.CENTER</code></li> 
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.NO_SCALE</code></li>
+		 </ul>
+		 
+		 
+		 Then, after automatic resizing, you get the following:
+		 <ul>
+		 <li><code>x</code> = 90</li>
+		 <li><code>y</code> = 80</li>
+		 <li><code>width</code> = 80</li>
+		 <li><code>height</code> = 80</li>  
+		 </ul>
+		 </p>
+		 
+		 <p>Example 2, load the same scenario as example 1 but with the following settings:
+		 <ul>
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code></li>
+		 </ul>
+		 
+		 You get the following:
+		 <ul>
+		 <li><code>x</code> = 110</li>
+		 <li><code>y</code> = 100</li> 
+		 <li><code>width</code> = 40</li> 
+		 <li><code>height</code> = 80</li>
+		 </ul>
+		 </p>
+		 
+		 <p>Example 3, load the same scenario as example 2 but with the following settings:
+		 <ul>
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.EXACT_FIT</code></li>
+		 </ul>
+		 
+		 You get all the same values as the registration values:
+		 <ul>
+		 <li><code>x</code> = 100</li> 
+		 <li><code>y</code> = 100</li>
+		 <li><code>width</code> = 60</li> 
+		 <li><code>height</code> = 40</li>
+		 </ul>
+		 </p>
+		 
+		 <p>Setting the <code>registrationHeight</code> property is
+		 equivalent to setting the <code>height</code> property and vice
+		 versa. Setting any other property or calling any method that
+		 alters the height, such as <code>scaleX</code>,
+		 <code>setSize</code>, and <code>setScale</code>, setting keeps
+		 <code>height</code> and <code>registrationHeight</code> in sync.</p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get registrationHeight():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set registrationHeight(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#registrationX" target="">registrationX</a><br/><a href="VideoPlayer.html#registrationY" target="">registrationY</a><br/><a href="VideoPlayer.html#registrationWidth" target="">registrationWidth</a><br/><a href="VideoAlign.html" target="">VideoAlign</a></div></div><a name="propertyDetail"></a><a name="registrationWidth"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registrationWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>registrationWidth:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 The width used to align the video content when autoresizing.
+		 Do not confuse the <code>registrationWidth</code> property 
+		 with the <code>width</code> property. The <code>width</code>
+		 property reflects the actual width of the video content.
+		 		 <p>Example 1, load an 80x80 FLV file with the following settings:
+		 <ul>
+		 <li><code>registrationX</code> = 100</li> 
+		 <li><code>registrationY</code> = 100</li>
+		 <li><code>registrationWidth</code> = 60</li> 
+		 <li><code>registrationHeight</code> = 40</li>
+		 <li><code>align</code> = <code>VideoAlign.CENTER</code></li> 
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.NO_SCALE</code></li>
+		 </ul>
+		 
+		 
+		 Then, after automatic resizing, you get the following:
+		 <ul>
+		 <li><code>x</code> = 90</li>
+		 <li><code>y</code> = 80</li>
+		 <li><code>width</code> = 80</li>
+		 <li><code>height</code> = 80</li>  
+		 </ul>
+		 </p>
+		 
+		 <p>Example 2, load the same scenario as example 1 but with the following settings:
+		 <ul>
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code></li>
+		 </ul>
+		 
+		 You get the following:
+		 <ul>
+		 <li><code>x</code> = 110</li>
+		 <li><code>y</code> = 100</li> 
+		 <li><code>width</code> = 40</li> 
+		 <li><code>height</code> = 80</li>
+		 </ul>
+		 </p>
+		 
+		 <p>Example 3, load the same scenario as example 2 but with the following settings:
+		 <ul>
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.EXACT_FIT</code></li>
+		 </ul>
+		 
+		 You get all the same values as the registration values:
+		 <ul>
+		 <li><code>x</code> = 100</li> 
+		 <li><code>y</code> = 100</li>
+		 <li><code>width</code> = 60</li> 
+		 <li><code>height</code> = 40</li>
+		 </ul>
+		 </p>
+		 
+		 <p>Setting the <code>registrationWidth</code> property is
+		 equivalent to setting the <code>width</code> property and vice
+		 versa. Setting any other property or calling any method that
+		 alters the width, such as <code>scaleX</code>,
+		 <code>setSize</code>, and <code>setScale</code>, also keeps
+		 <code>width</code> and <code>registrationWidth</code> in sync.</p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get registrationWidth():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set registrationWidth(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#registrationX" target="">registrationX</a><br/><a href="VideoPlayer.html#registrationY" target="">registrationY</a><br/><a href="VideoPlayer.html#registrationHeight" target="">registrationHeight</a><br/><a href="VideoAlign.html" target="">VideoAlign</a></div></div><a name="propertyDetail"></a><a name="registrationX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registrationX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>registrationX:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 The x coordinate used to align the video content when 
+		 autoresizing. Do not confuse with the <code>x</code> property,
+		 which reflects the actual location of the video content.
+		 		 <p>Example 1, load an 80x80 FLV file with the following settings:
+		 <ul>
+		     <li><code>registrationX</code> = 100</li> 
+		     <li><code>registrationY</code> = 100</li>
+		     <li><code>registrationWidth</code> = 60</li> 
+		     <li><code>registrationHeight</code> = 40</li>
+		     <li><code>align</code> = <code>VideoAlign.CENTER</code></li> 
+		     <li><code>scaleMode</code> = <code>VideoScaleMode.NO_SCALE</code></li>
+		 </ul>
+		 
+		 
+		 Then, after automatic resizing, you get the following:
+		 <ul>
+             <li><code>x</code> = 90</li>
+             <li><code>y</code> = 80</li>
+             <li><code>width</code> = 80</li>
+             <li><code>height</code> = 80</li>  
+		 </ul>
+		 </p>
+		 
+		 <p>Example 2, load the same scenario as example 1 but with the following settings:
+		 <ul>
+		     <li><code>scaleMode</code> = <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code></li>
+		 </ul>
+		 
+		 You get the following:
+		 <ul>
+		 <li><code>x</code> = 110</li>
+		 <li><code>y</code> = 100</li> 
+		 <li><code>width</code> = 40</li> 
+		 <li><code>height</code> = 80</li>
+		 </ul>
+		 </p>
+		 
+		 <p>Example 3, load the same scenario as example 2 but with the following settings:
+		 <ul>
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.EXACT_FIT</code></li>
+		 </ul>
+		 
+		 You get all the same values as the registration values:
+		 <ul>
+		 <li><code>x</code> = 100</li> 
+		 <li><code>y</code> = 100</li>
+		 <li><code>width</code> = 60</li> 
+		 <li><code>height</code> = 40</li>
+		 </ul>
+		 </p>
+		 
+		 <p>When either the <code>x</code> or <code>registrationX</code>
+		 property is set, the second property is changed to maintain its
+		 offset from the first.  For example, if <code>x</code> = 10 and 
+		 <code>registrationX</code> = 20, setting <code>x</code> = 110 also 
+		 sets <code>registrationX</code> = 120.</p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get registrationX():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set registrationX(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#registrationY" target="">registrationY</a><br/><a href="VideoPlayer.html#registrationWidth" target="">registrationWidth</a><br/><a href="VideoPlayer.html#registrationHeight" target="">registrationHeight</a><br/><a href="VideoAlign.html" target="">VideoAlign</a></div></div><a name="propertyDetail"></a><a name="registrationY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registrationY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>registrationY:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 The y coordinate used to align the video content when 
+		 autoresizing. Do not confuse with the <code>y</code> property,
+		 which reflects the actual location of the video content.
+		 		 <p>Example 1, load an 80x80 FLV file with the following settings:
+		 <ul>
+		 <li><code>registrationX</code> = 100</li> 
+		 <li><code>registrationY</code> = 100</li>
+		 <li><code>registrationWidth</code> = 60</li> 
+		 <li><code>registrationHeight</code> = 40</li>
+		 <li><code>align</code> = <code>VideoAlign.CENTER</code></li> 
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.NO_SCALE</code></li>
+		 </ul>
+		 
+		 
+		 Then, after automatic resizing, you get the following:
+		 <ul>
+		 <li><code>x</code> = 90</li>
+		 <li><code>y</code> = 80</li>
+		 <li><code>width</code> = 80</li>
+		 <li><code>height</code> = 80</li>  
+		 </ul>
+		 </p>
+		 
+		 <p>Example 2, load the same scenario as example 1 but with the following settings:
+		 <ul>
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code></li>
+		 </ul>
+		 
+		 You get the following:
+		 <ul>
+		 <li><code>x</code> = 110</li>
+		 <li><code>y</code> = 100</li> 
+		 <li><code>width</code> = 40</li> 
+		 <li><code>height</code> = 80</li>
+		 </ul>
+		 </p>
+		 
+		 <p>Example 3, load the same scenario as example 2 but with the following settings:
+		 <ul>
+		 <li><code>scaleMode</code> = <code>VideoScaleMode.EXACT_FIT</code></li>
+		 </ul>
+		 
+		 You get all the same values as the registration values:
+		 <ul>
+		 <li><code>x</code> = 100</li> 
+		 <li><code>y</code> = 100</li>
+		 <li><code>width</code> = 60</li> 
+		 <li><code>height</code> = 40</li>
+		 </ul>
+		 </p>
+		 
+		 <p>When either the <code>y</code> or <code>registrationY</code>
+		 property is set, the second property is changed to maintain its
+		 offset from the first.  For example, if <code>y</code> = 10 and 
+		 <code>registrationY</code> = 20, setting <code>y</code> = 110 also 
+		 sets <code>registrationY</code> = 120.</p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get registrationY():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set registrationY(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#registrationX" target="">registrationX</a><br/><a href="VideoPlayer.html#registrationWidth" target="">registrationWidth</a><br/><a href="VideoPlayer.html#registrationHeight" target="">registrationHeight</a><br/><a href="VideoAlign.html" target="">VideoAlign</a></div></div><a name="propertyDetail"></a><a name="scaleMode"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scaleMode</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>scaleMode:String</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Specifies how the video resizes after loading.  If set to
+		 <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code>, maintains the
+		 video aspect ratio within the rectangle defined by
+		 <code>registrationX</code>, <code>registrationY</code>,
+		 <code>registrationWidth</code> and
+		 <code>registrationHeight</code>.  If set to
+		 <code>VideoScaleMode.NO_SCALE</code>, causes the video to size automatically
+		 to the dimensions of the source FLV file.  If set to
+		 <code>VideoScaleMode.EXACT_FIT</code>, causes the dimensions of
+		 the source FLV file to be ignored and the video is stretched to
+		 fit the rectangle defined by
+		 <code>registrationX</code>, <code>registrationY</code>,
+		 <code>registrationWidth</code> and
+		 <code>registrationHeight</code>. If this is set
+		 after an FLV file has been loaded an automatic layout will start
+		 immediately.  Values come from
+		 <code>VideoScaleMode</code>.
+		 		 </p><p> The default value is <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scaleMode():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scaleMode(value:String):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoScaleMode.html" target="">VideoScaleMode</a></div></div><a name="propertyDetail"></a><a name="scaleX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scaleX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>scaleX:Number</code>&nbsp;&nbsp;[write-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that is the horizontal scale. 
+		 		 </p><p> The default value is <code>1</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scaleX(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso">setScale()<br/>scaleY</div></div><a name="propertyDetail"></a><a name="scaleY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scaleY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>scaleY:Number</code>&nbsp;&nbsp;[write-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that is the vertical scale. 
+		 		 </p><p> The default value is <code>1</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scaleY(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso">setScale()</div></div><a name="propertyDetail"></a><a name="soundTransform"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">soundTransform</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>soundTransform:SoundTransform</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Provides direct access to the
+		 <code>NetStream.soundTransform</code> property to expose
+		 more sound control. Set the property to change the settings;
+		 use the getter accessor method of the property to retrieve 
+		 the current settings.
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get soundTransform():SoundTransform</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set soundTransform(value:SoundTransform):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#volume" target="">volume</a></div></div><a name="propertyDetail"></a><a name="source"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">source</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>source:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A string that specifies the URL of the FLV file to stream and how to stream it.
+		 The URL can be an HTTP URL to an FLV file, an RTMP URL to a stream, or an 
+		 HTTP URL to an XML file.
+		 		 <p>If you set this property through the Component inspector or the Property inspector, 
+		 the FLV file begins loading and playing at the next <code>enterFrame</code> event.
+		 The delay provides time to set the <code>isLive</code>, <code>autoPlay</code>, 
+		 and <code>cuePoints</code> properties, 
+		 among others, which affect loading. It also allows ActionScript that is placed 
+		 on the first frame to affect the FLVPlayback component before it starts playing.</p>
+		 		 <p>If you set this property through ActionScript, it immediately calls the
+		 <code>VideoPlayer.load()</code> method when the <code>autoPlay</code> property is
+		 set to <code>false</code>. Alternatively, it calls the <code>VideoPlayer.play()</code> method when
+		 the <code>autoPlay</code> property is set to <code>true</code>.  The <code>autoPlay</code>, 
+		 <code>totalTime</code>, and <code>isLive</code> properties affect how the new FLV file is 
+		 loaded, so if you set these properties, you must set them before setting the
+		 <code>source</code> property.</p>
+		 
+		 <p>Set the <code>autoPlay</code> property to <code>false</code> to prevent the new 
+		 FLV file from playing automatically.</p>
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get source():String</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="FLVPlayback.html#autoPlay" target="">FLVPlayback.autoPlay</a><br/><a href="VideoPlayer.html#isLive" target="">isLive</a><br/><a href="VideoPlayer.html#totalTime" target="">totalTime</a><br/><a href="VideoPlayer.html#load()" target="">load()</a><br/><a href="VideoPlayer.html#play()" target="">play()</a><br/><a href="FLVPlayback.html#load()" target="">FLVPlayback.load()</a><br/><a href="FLVPlayback.html#play()" target="">FLVPlayback.play()</a></div></div><a name="propertyDetail"></a><a name="state"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">state</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>state:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A string that specifies the state of the component. This property is set by the 
+		 <code>load()</code>, <code>play()</code>, <code>stop()</code>, <code>pause()</code>, 
+		 and <code>seek()</code> methods. 
+		 
+		 <p>The possible values for the state property are: <code>buffering</code>, 
+		 <code>connectionError</code>, <code>disconnected</code>, <code>loading</code>, 
+		 <code>paused</code>, <code>playing</code>, <code>rewinding</code>, <code>seeking</code>, 
+		 and <code>stopped</code>. You can use the FLVPlayback class properties to test for 
+		 these states. </p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get state():String</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoState.html#DISCONNECTED" target="">VideoState.DISCONNECTED</a><br/><a href="VideoState.html#STOPPED" target="">VideoState.STOPPED</a><br/><a href="VideoState.html#PLAYING" target="">VideoState.PLAYING</a><br/><a href="VideoState.html#PAUSED" target="">VideoState.PAUSED</a><br/><a href="VideoState.html#BUFFERING" target="">VideoState.BUFFERING</a><br/><a href="VideoState.html#LOADING" target="">VideoState.LOADING</a><br/><a href="VideoState.html#CONNECTION_ERROR" target="">VideoState.CONNECTION_ERROR</a><br/><a href="VideoState.html#REWINDING" target="">VideoState.REWINDING</a><br/><a href="VideoState.html#SEEKING" target="">VideoState.SEEKING</a></div></div><a name="propertyDetail"></a><a name="stateResponsive"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stateResponsive</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>stateResponsive:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A Boolean value that is <code>true</code> if the state is responsive. If the state is 
+		 unresponsive, calls to the <code>play()</code>, <code>load()</code>, <code>stop()</code>, 
+		 <code>pause()</code>, and <code>seek()</code>
+		 methods are queued and executed later, when the state changes to a 
+		 responsive one. Because these calls are queued and executed later, 
+		 it is usually not necessary to track the value of the <code>stateResponsive </code>
+		 property. The responsive states are: 
+		 <code>stopped</code>, <code>playing</code>, <code>paused</code>, and <code>buffering</code>. 
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stateResponsive():Boolean</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a><br/><a href="VideoState.html#DISCONNECTED" target="">VideoState.DISCONNECTED</a><br/><a href="VideoState.html#STOPPED" target="">VideoState.STOPPED</a><br/><a href="VideoState.html#PLAYING" target="">VideoState.PLAYING</a><br/><a href="VideoState.html#PAUSED" target="">VideoState.PAUSED</a><br/><a href="VideoState.html#LOADING" target="">VideoState.LOADING</a><br/><a href="VideoState.html#RESIZING" target="">VideoState.RESIZING</a><br/><a href="VideoState.html#CONNECTION_ERROR" target="">VideoState.CONNECTION_ERROR</a><br/><a href="VideoState.html#REWINDING" target="">VideoState.REWINDING</a></div></div><a name="propertyDetail"></a><a name="totalTime"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">totalTime</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>totalTime:Number</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that is the total playing time for the video in seconds.
+		 		 <p>When streaming from Flash Media Server (FMS) and using the default
+		 <code>NCManager</code>, this value is determined
+		 automatically by server-side application programming interfaces (APIs), and that value 
+		 overrides anything set through this property or gathered
+		 from metadata. The property is ready for reading when the
+		 <code>stopped</code> or <code>playing</code> state is reached after setting the
+		 <code>source</code> property. This property is meaningless for live streams
+		 from an FMS.</p>
+		 		 <p>With an HTTP download, the value is determined
+		 automatically if the FLV file has metadata embedded; otherwise,
+		 set it explicitly, or it will be NaN.  If you set it
+		 explicitly, the metadata value in the stream is
+		 ignored.</p>
+		 		 <p>When you set this property, the value takes effect for the next
+		 FLV file that is loaded by setting <code>source</code>. It has no effect
+		 on an FLV file that has already loaded.  Also, this property does not return 
+		 the new value passed in until an FLV file is loaded.</p>
+		 		 <p>Playback still works if this property is never set (either
+		 explicitly or automatically), but it can cause problems
+		 with seek controls.</p>
+		 		 <p>Unless set explicitly, the value will be NaN until it is set to a valid value from metadata.</p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get totalTime():Number</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#source" target="">source</a></div></div><a name="propertyDetail"></a><a name="videoHeight"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">videoHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>videoHeight:int</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 The source width of the loaded FLV file. This property returns
+		 -1 if no information is available yet.
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get videoHeight():int</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#height" target="">height</a></div></div><a name="propertyDetail"></a><a name="videoWidth"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">videoWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>videoWidth:int</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 The source width of the loaded FLV file. This property returns
+		 -1 if no information is available yet.
+		 
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get videoWidth():int</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#width" target="">width</a></div></div><a name="propertyDetail"></a><a name="visible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">visible</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>visible:Boolean</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A Boolean value that, if <code>true</code>, makes the VideoPlayer instance visible. 
+		 If <code>false</code>, it makes the instance invisible. 
+		 
+		 </p><p> The default value is <code>true</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get visible():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set visible(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="volume"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">volume</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>volume:Number</code>&nbsp;&nbsp;[read-write] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number in the range of 0 to 1 that indicates the volume control setting. 
+		 </p><p> The default value is <code>1</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get volume():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set volume(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#soundTransform" target="">soundTransform</a></div></div><a name="propertyDetail"></a><a name="width"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">width</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>width:Number</code>&nbsp;&nbsp;[write-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that specifies the width of the VideoPlayer instance on the Stage.
+		 
+		 <p><b>Note</b>: The <code>flash.media.Video.width</code> property is similar to the 
+		  <code>fl.video.VideoPlayer.videoWidth</code> property.</p>
+         		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set width(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso">setSize()<br/>Video.videoWidth<br/>VideoPlayer.videoWidth</div></div><a name="propertyDetail"></a><a name="x"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">x</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>x:Number</code>&nbsp;&nbsp;[write-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that specifies the horizontal position (in pixels) of the video player.
+		 
+		 <p>Setting the <code>x</code> property also affects the <code>registrationX</code> property. 
+		 When either the <code>x</code> or <code>registrationX</code> property is set,
+		 the second property is changed to maintain its offset from the
+		 first. For example, if <code>x</code> = 10 and <code>registrationX</code> = 20, setting 
+		 <code>x</code> = 110 also sets <code>registrationX</code> = 120.</p>
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set x(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso">registrationX</div></div><a name="propertyDetail"></a><a name="y"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">y</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>y:Number</code>&nbsp;&nbsp;[write-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 A number that specifies the vertical position (in pixels) of the video player.
+		 
+		 <p>Setting the <code>y</code> property also affects the <code>registrationY</code> property. 
+		 When either the <code>y</code> or <code>registrationY</code> property is set,
+		 the second property is changed to maintain its offset from the
+		 first. For example, if <code>y</code> = 10 and <code>registrationY</code> = 20, setting 
+		 <code>y</code> = 110 also sets <code>registrationY</code> = 120.</p>
+		          </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set y(value:Number):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso">registrationY</div></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="VideoPlayer()"></a><a name="VideoPlayer(int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VideoPlayer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function VideoPlayer(width:int = 320, height:int = 240)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p>
+		 Creates a VideoPlayer object with a specified width and height.
+		 
+		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">width</span>:int</code> (default = <code>320</code>)<code></code> &mdash; The width of the video player in pixels.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">height</span>:int</code> (default = <code>240</code>)<code></code> &mdash; The height of the video player in pixels.
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="INCManager.html" target="">INCManager</a><br/><a href="NCManager.html" target="">NCManager</a></div></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="_playDynamicStream()"></a><a name="_playDynamicStream(int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">_playDynamicStream</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> flvplayback_internal function _playDynamicStream(startTime:int = 0, endTime:int = -1):void</code><p></p><p></p><p>
+		 Extension of _play to handle the necessary elements required for Dynamic Streaming.
+		  
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">startTime</span>:int</code> (default = <code>0</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">endTime</span>:int</code> (default = <code>-1</code>)<code></code></td></tr></table></p></div><a name="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function close():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Forces the video stream and Flash Media Server connection to close. This
+		 method triggers the <code>close</code> event. You usually do not need to call this 
+		 method directly, because the idle timeout functionality takes care of closing the stream.
+		          </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#idleTimeout" target="">idleTimeout</a></div></div><a name="handleDVRError()"></a><a name="handleDVRError(flash.events.Event)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">handleDVRError</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> flvplayback_internal function handleDVRError(e:Event):void</code><p></p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">e</span>:Event</code></td></tr></table></p></div><a name="load()"></a><a name="load(String,Number,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">load</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function load(url:String, totalTime:Number, isLive:Boolean = false):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Similar to the <code>play()</code> method, but causes the FLV file 
+		 to load without playing. Autoresizing occurs if appropriate, and the first
+		 frame of the FLV file is shown. 
+		 After initial loading and autolayout, the state is <code>VideoState.PAUSED</code>.
+		 		 <p>This method takes the same parameters as the <code>play()</code> method, 
+		 but you cannot call the <code>load()</code> method without a URL.
+		 If you do, an error is thrown. If the video player is in an unresponsive state, 
+		 the <code>load()</code> method queues the request.</p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">url</span>:String</code> &mdash; A URL string for the FLV file that you want to load. If no value is 
+		 passed for URL, an error is thrown with the message 
+		 <code>null URL sent to VideoPlayer.load</code>.
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">totalTime</span>:Number</code> (default = <code>NaN</code>)<code></code> &mdash; The length of an FLV file. Pass in 0, <code>null</code>, or
+		 undefined to automatically detect length from metadata, server, or XML. 
+		  
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">isLive</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; The value is <code>true</code> if you stream a live feed from Flash Media Server (FMS). 
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#play()" target="">play()</a></div></div><a name="ncConnected()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ncConnected</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function ncConnected():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Called by INCManager after the connection is complete or failed after a call to the
+		 <code>INCManager.connectToURL()</code> method. If the connection failed, set 
+		 the <code>INCManager.netConnection</code> property to <code>null</code> or
+		 undefined before calling.
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#ncReconnected()" target="">ncReconnected()</a><br/><a href="INCManager.html#connectToURL()" target="">INCManager.connectToURL()</a><br/><a href="NCManager.html#connectToURL()" target="">NCManager.connectToURL()</a></div></div><a name="ncReconnected()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ncReconnected</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function ncReconnected():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Called by INCManager after the reconnection is complete or has failed after a call to
+		 the <code>INCManager.reconnect()</code> method. If the connection fails, 
+		 set the <code>INCManager.netconnection</code> property to <code>null</code>
+		 before you call it.
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#ncConnected()" target="">ncConnected()</a><br/><a href="INCManager.html#reconnect()" target="">INCManager.reconnect()</a><br/><a href="NCManager.html#reconnect()" target="">NCManager.reconnect()</a></div></div><a name="pause()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pause</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function pause():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Pauses video playback.  If video is paused or stopped, has
+		 no effect.  To start playback again, call <code>play()</code>.
+		 Takes no parameters.
+		 		 <p>If player is in an unresponsive state, the <code>pause()</code> method
+		 queues the request.</p>
+		 		 <p>Throws an exception if called when no stream is
+         connected.  Use the <code>stateChange</code> event and
+		 <code>connected</code> property to determine when it is
+		 safe to call this method.</p>
+		          <p>If the player is in a stopped state, a call to the <code>pause()</code> 
+		 method has no effect and the player remains in a stopped state.</p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#stateResponsive" target="">stateResponsive</a><br/><a href="VideoPlayer.html#play()" target="">play()</a></div></div><a name="play()"></a><a name="play(String,Number,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">play</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function play(url:String = null, totalTime:Number, isLive:Boolean = false):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Causes the video to play. Can be called while the video is
+		 paused or stopped, or while the video is already playing.  Call this
+		 method with no arguments to play an already loaded video or pass
+		 in a URL to load a new stream.
+		 		 <p>If the player is in an unresponsive state, queues the request.</p>
+		 		 <p>Throws an exception if called with no arguments at a time when no stream
+		 is connected. Use the <code>stateChange</code> event and the
+		 <code>connected</code> property to determine when it is
+		 safe to call this method.</p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">url</span>:String</code> (default = <code>null</code>)<code></code> &mdash; Pass in a URL string if you want to load and play a
+		 new FLV file. If you have already loaded an FLV file and want to continue
+		 playing it, pass in <code>null</code>. 
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">totalTime</span>:Number</code> (default = <code>NaN</code>)<code></code> &mdash; Pass in the length of the FLV file. Pass in <code>0</code> or <code>NaN</code>
+		 to automatically detect the length from metadata, server, or
+		 XML. If the <code>INCManager.streamLength</code> property is not <code>0</code>, 
+		 <code>null</code>, or undefined when the <code>ncConnected</code> property is called,
+		 that value takes precedence over this one.  
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">isLive</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Pass in <code>true</code> if streaming a live feed from Flash Media Server (FMS). 
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#stateResponsive" target="">stateResponsive</a><br/><a href="VideoPlayer.html#load()" target="">load()</a></div></div><a name="play2()"></a><a name="play2(fl.video.DynamicStreamItem)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">play2</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function play2(dsi:<a href="../../fl/video/DynamicStreamItem.html">DynamicStreamItem</a>):void</code><p></p><p></p><p>
+		 Plays a stream using the Dynamic Streaming feature.  You will need to create a new
+		 DynamicStreamItem and pass that as an argument in play2.  The component will then
+		 automatically switch between the available bit rates passed in with the streams to 
+		 play the most appropriate stream bit rate for the users available bandwidth at that time.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dsi</span>:<a href="../../fl/video/DynamicStreamItem.html">DynamicStreamItem</a></code> &mdash; A DynamicStreamItem object containing the URI, streams and stream bit rates.
+		 
+		 </td></tr></table></p></div><a name="playWhenEnoughDownloaded()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">playWhenEnoughDownloaded</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function playWhenEnoughDownloaded():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Plays the FLV file when enough of it has downloaded. If the FLV file has downloaded 
+		 or you are streaming from Flash Media Server (FMS), then calling the <code>playWhenEnoughDownloaded()</code>
+		 method is identical to the <code>play()</code> method with no parameters. Calling 
+		 this method does not pause playback, so in many cases, you may want to call 
+		 the <code>pause()</code> method before you call this method.
+		 
+		 </p></div><a name="seek()"></a><a name="seek(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">seek</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function seek(time:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Seeks to a given time in the file, specified in seconds, with a precision of three
+		 decimal places (milliseconds). If a video is playing, the video continues to play
+		 from that point. If a video is paused, the video seeks to that point and remains paused. 
+		 If a video is stopped, the video seeks 
+		 to that point and enters the paused state. Has no effect with live streams.
+		          <p>The <code>playheadTime</code> property might not have the expected value 
+		 immediately after you call one of the seek methods or set  
+		 <code>playheadTime</code> to cause seeking. For a progressive download,
+		 you can seek only to a keyframe; therefore, a seek takes you to the 
+		 time of the first keyframe after the specified time.</p>
+		 
+		 <p><b>Note</b>: When streaming, a seek always goes to the precise specified 
+		 time even if the source FLV file doesn't have a keyframe there.</p>
+		 		 <p>Seeking is asynchronous, so if you call a seek method or set the 
+		 <code>playheadTime</code> property, <code>playheadTime</code> does not update immediately. 
+		 To obtain the time after the seek is complete, listen for the <code>seek</code> event, 
+		 which does not start until the <code>playheadTime</code> property is updated.</p>
+		 		 <p>Throws an exception if called when no stream is
+         connected.  Use the <code>stateChange</code> event and
+		 the <code>connected</code> property to determine when it is
+		 safe to call this method.</p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">time</span>:Number</code> &mdash; A number that specifies the time, in seconds, at which to place the 
+		 playhead.
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../fl/video/VideoError.html">VideoError</a> </code> &mdash; If time is &lt; 0 or <code>NaN</code>.
+         </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#stateResponsive" target="">stateResponsive</a></div></div><a name="setScale()"></a><a name="setScale(Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setScale</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setScale(scaleX:Number, scaleY:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Sets the <code>scaleX</code> and <code>scaleY</code> properties simultaneously.  
+                 Setting the <code>scaleX</code> or <code>scaleY</code> individually
+                 triggers two <code>autolayout</code> events whereas calling the 
+                 <code>setScale()</code> method causes only one <code>autolayout</code> event. 
+                 
+		 <p>If the <code>scaleMode</code> property is
+		 <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code> or
+		 <code>VideoScaleMode.NO_SCALE</code>, calling this method
+		 causes an immediate <code>autolayout</code> event.</p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">scaleX</span>:Number</code> &mdash; A number that represents the horizontal scale.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">scaleY</span>:Number</code> &mdash; A number that represents the vertical scale.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#scaleX" target="">scaleX</a><br/><a href="VideoPlayer.html#scaleY" target="">scaleY</a><br/><a href="VideoScaleMode.html#MAINTAIN_ASPECT_RATIO" target="">VideoScaleMode.MAINTAIN_ASPECT_RATIO</a><br/><a href="VideoScaleMode.html#NO_SCALE" target="">VideoScaleMode.NO_SCALE</a></div></div><a name="setSize()"></a><a name="setSize(Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setSize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setSize(width:Number, height:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Sets the <code>width</code> and <code>height</code> properties simultaneously.  
+                 Setting the <code>width</code> or <code>height</code> individually
+                 triggers two <code>autolayout</code> events whereas calling the 
+                 <code>setSize()</code> method causes only one <code>autolayout</code> event. 
+		 		 <p>If the <code>scaleMode</code> property is
+		 <code>VideoScaleMode.MAINTAIN_ASPECT_RATIO</code> or
+		 <code>VideoScaleMode.NO_SCALE</code> then calling this method
+		 triggers an immediate <code>autolayout</code> event.</p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">width</span>:Number</code> &mdash; The width of the video player.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">height</span>:Number</code> &mdash; The height of the video player.
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#width" target="">width</a><br/><a href="VideoPlayer.html#height" target="">height</a><br/><a href="VideoScaleMode.html#MAINTAIN_ASPECT_RATIO" target="">VideoScaleMode.MAINTAIN_ASPECT_RATIO</a><br/><a href="VideoScaleMode.html#NO_SCALE" target="">VideoScaleMode.NO_SCALE</a></div></div><a name="stop()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stop():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+		 Stops video playback.  If <code>autoRewind</code> is set to
+		 <code>true</code>, rewinds to first frame.  If video is already
+		 stopped, has no effect.  To start playback again, call
+		 <code>play()</code>.  Takes no parameters.
+		 		 <p>If player is in an unresponsive state, queues the request.</p>
+		 		 <p>Throws an exception if called when no stream is
+         connected.  Use the <code>stateChange</code> event and
+		 <code>connected</code> property to determine when it is
+		 safe to call this method.</p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#stateResponsive" target="">stateResponsive</a><br/><a href="VideoPlayer.html#autoRewind" target="">autoRewind</a><br/><a href="VideoPlayer.html#play()" target="">play()</a></div></div><div class="detailSectionHeader"> Event Detail </div><a name="event:autoRewound"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">autoRewound</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/VideoEvent.html"><code>fl.video.VideoEvent</code></a><br/><span class="label">VideoEvent.type property = </span><a href="../../fl/video/VideoEvent.html#AUTO_REWOUND"><code>fl.video.VideoEvent.AUTO_REWOUND</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched when the playhead is moved to the start of the video player because the 
+	 <code>autoRewind</code> property is set to <code>true</code>.
+	 
+	 <p>The <code>autoRewound</code> event is of type VideoEvent and has the constant 
+	 <code>VideoEvent.AUTO_REWOUND</code>.</p>
+	 
+	 </p>
+         Defines the value of the <code>type</code> property of an <code>autoRewound</code> 
+		 event object. 
+         
+         <p>This event has the following properties:</p>
+         <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td></tr><tr><td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+         
+         <p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoEvent.html#AUTO_REWOUND" target="">VideoEvent.AUTO_REWOUND</a><br/><a href="VideoPlayer.html#autoRewind" target="">autoRewind</a><br/><a href="VideoState.html#REWINDING" target="">VideoState.REWINDING</a></div></div><a name="event:close"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">close</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/VideoEvent.html"><code>fl.video.VideoEvent</code></a><br/><span class="label">VideoEvent.type property = </span><a href="../../fl/video/VideoEvent.html#CLOSE"><code>fl.video.VideoEvent.CLOSE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched by the VideoPlayer instance when it closes the NetConnection  
+	 by timing out or through a call to the <code>close()</code> method, or when 
+	 you call the <code>load()</code> or <code>play()</code> methods or set the 
+	 <code>source</code> property and cause the RTMP connection 
+	 to close as a result. The FLVPlayback instance dispatches this event only when 
+	 streaming from Flash Media Server (FMS) or other Flash Video Streaming Service (FVSS). 
+	 
+	 <p>The <code>close</code> event is of type VideoEvent and has the constant 
+	 <code>VideoEvent.CLOSE</code>.</p>
+	 
+ 	 </p>
+         Defines the value of the <code>type</code> property of a <code>close</code> 
+		 event object.
+         
+         <p>This event has the following properties:</p>
+         <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td></tr><tr><td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+         
+         <p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoEvent.html#CLOSE" target="">VideoEvent.CLOSE</a><br/><a href="VideoPlayer.html#close()" target="">close()</a><br/><a href="VideoPlayer.html#source" target="">source</a><br/><a href="VideoPlayer.html#load()" target="">load()</a><br/><a href="VideoPlayer.html#play()" target="">play()</a></div></div><a name="event:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">complete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/VideoEvent.html"><code>fl.video.VideoEvent</code></a><br/><span class="label">VideoEvent.type property = </span><a href="../../fl/video/VideoEvent.html#COMPLETE"><code>fl.video.VideoEvent.COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched when playing completes because the player reached the end of the FLV file. 
+	 The component does not dispatch the event if you call the <code>stop()</code> or 
+	 <code>pause()</code> methods 
+	 or click the corresponding controls. 
+	 
+	 <p>When the application uses progressive download, it does not set the 
+	 <code>totalTime</code>
+	 property explicitly, and it downloads an FLV file that does not specify the duration 
+	 in the metadata. The video player sets the <code>totalTime</code> property to an approximate 
+	 total value before it dispatches this event.</p>
+	 
+	 <p>The video player also dispatches the <code>stateChange</code> and <code>stopped</code>
+	 events.</p>
+	 
+	 <p>The <code>complete</code> event is of type VideoEvent and has the constant 
+	 <code>VideoEvent.COMPLETE</code>.</p>
+	 
+	 </p>
+         Defines the value of the <code>type</code> property of a <code>complete</code> event object. 
+         
+         <p>This event has the following properties:</p>
+         <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td></tr><tr><td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+         
+         <p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#event:stateChange" target="">stateChange event</a><br/><a href="VideoPlayer.html#stop()" target="">stop()</a><br/><a href="VideoPlayer.html#pause()" target="">pause()</a><br/><a href="VideoPlayer.html#totalTime" target="">totalTime</a></div></div><a name="event:cuePoint"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">cuePoint</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/MetadataEvent.html"><code>fl.video.MetadataEvent</code></a><br/><span class="label">MetadataEvent.type property = </span><a href="../../fl/video/MetadataEvent.html#CUE_POINT"><code>fl.video.MetadataEvent.CUE_POINT</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched when a cue point is reached. The event object has an 
+	 <code>info</code> property that contains the info object received by the 
+	 <code>NetStream.onCuePoint</code> event callback for FLV file cue points. 
+	 For ActionScript cue points, it contains the object that was passed 
+	 into the ActionScript cue point methods or properties.
+	 
+	 <p>The <code>cuePoint</code> event is of type MetadataEvent and has the constant 
+	 <code>MetadataEvent.CUE_POINT</code>.</p>
+	 
+	 </p>
+		 Defines the value of the 
+		 <code>type</code> property of a <code>cuePoint</code> event object.
+		 
+		 <p>This event has the following properties:</p>
+		 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>info</code></td><td>The object with properties describing the cue point.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+		 <p><span class="label">See also</span></p><div class="seeAlso"><a href="MetadataEvent.html#CUE_POINT" target="">MetadataEvent.CUE_POINT</a><br/>NetStream.onCuePoint event</div></div><a name="event:layout"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">layout</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/LayoutEvent.html"><code>fl.video.LayoutEvent</code></a><br/><span class="label">LayoutEvent.type property = </span><a href="../../fl/video/LayoutEvent.html#LAYOUT"><code>fl.video.LayoutEvent.LAYOUT</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched when the video player is resized or laid out. Here are two layout scenarios:
+	 <ul><li>If the video player is laid out by either using the <code>autoLayout</code> 
+	 event or calling the <code>setScale()</code> or 
+	 <code>setSize()</code> methods or changing the <code>width</code>, <code>height</code>,
+	 <code>scaleX</code>, and <code>scaleY</code> properties.</li>
+	 <li>If there are two video players of different sizes and the 
+	 <code>visibleVideoPlayerIndex</code> property is switched from one video player to another.</li>
+	 </ul>  
+	 	 <p>The <code>layout</code> event is of type LayoutEvent and has the constant 
+	 <code>LayoutEvent.LAYOUT</code>.</p> 
+	 
+	 </p>
+         Defines the value of the <code>type</code>
+         property of a <code>layout</code> event object.
+         
+         <p>This event has the following properties:</p>
+	 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>oldBounds</code></td><td>The values of the <code>x</code>, <code>y</code>, 
+	        <code>width</code>, and <code>height</code> properties of the target before the <code>layout</code> event occurs.</td></tr><tr><td><code>oldRegistrationBounds</code></td><td>The values of the <code>registrationX</code>, 
+	 <code>registrationY</code>, <code>registrationWidth</code>, and 
+	 <code>registrationHeight</code> properties of the target before the <code>layout</code> event occurs.</td></tr></table>
+	 <p><span class="label">See also</span></p><div class="seeAlso"><a href="FLVPlayback.html#event:autoLayout" target="">autoLayout event</a><br/><a href="LayoutEvent.html#LAYOUT" target="">LayoutEvent.LAYOUT</a><br/><a href="FLVPlayback.html#visibleVideoPlayerIndex" target="">FLVPlayback.visibleVideoPlayerIndex</a></div></div><a name="event:metadataReceived"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">metadataReceived</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/MetadataEvent.html"><code>fl.video.MetadataEvent</code></a><br/><span class="label">MetadataEvent.type property = </span><a href="../../fl/video/MetadataEvent.html#METADATA_RECEIVED"><code>fl.video.MetadataEvent.METADATA_RECEIVED</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched the first time the FLV file's metadata is reached.
+	 The event object has an <code>info</code> property that contains the 
+	 info object received by the <code>NetStream.onMetaData</code> event callback.
+	 	 <p>The <code>metadataReceived</code> event is of type MetadataEvent and has the constant 
+	 <code>MetadataEvent.METADATA_RECEIVED</code>.</p>
+	 
+	 </p>
+		 Defines the value of the 
+		 <code>type</code> property of a <code>metadataReceived</code> event object.
+		 
+		 <p>This event has the following properties:</p>
+		 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>info</code></td><td>The object with properties describing the FLV file.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+		 
+		 <p><span class="label">See also</span></p><div class="seeAlso"><a href="MetadataEvent.html#METADATA_RECEIVED" target="">MetadataEvent.METADATA_RECEIVED</a><br/>NetStream.onMetaData event</div></div><a name="event:playheadUpdate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">playheadUpdate</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/VideoEvent.html"><code>fl.video.VideoEvent</code></a><br/><span class="label">VideoEvent.type property = </span><a href="../../fl/video/VideoEvent.html#PLAYHEAD_UPDATE"><code>fl.video.VideoEvent.PLAYHEAD_UPDATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched while the FLV file is playing at the frequency specified by the 
+	 <code>playheadUpdateInterval</code> property or when rewinding starts. 
+	 The component does not dispatch this event when the video player is paused or stopped 
+	 unless a seek occurs. 
+	 
+	 <p>The <code>playheadUpdate</code> event is of type VideoEvent and has the constant 
+	 <code>VideoEvent.PLAYHEAD_UPDATE</code>.</p> 
+     
+     </p>
+         Defines the value of the <code>type</code> property of a <code>playheadUpdate</code> 
+		 event object. 
+         
+         <p>This event has the following properties:</p>
+         <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td></tr><tr><td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+         
+         <p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoEvent.html#PLAYHEAD_UPDATE" target="">VideoEvent.PLAYHEAD_UPDATE</a><br/><a href="VideoPlayer.html#playheadUpdateInterval" target="">playheadUpdateInterval</a></div></div><a name="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">progress</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/VideoProgressEvent.html"><code>fl.video.VideoProgressEvent</code></a><br/><span class="label">VideoProgressEvent.type property = </span><a href="../../fl/video/VideoProgressEvent.html#PROGRESS"><code>fl.video.VideoProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Indicates progress made in number of bytes downloaded. Dispatched at the frequency 
+	 specified by the <code>progressInterval</code> property, starting 
+	 when the load begins and ending when all bytes are loaded or there is a network error. 
+	 The default is every 0.25 seconds starting when load is called and ending
+	 when all bytes are loaded or if there is a network error. Use this event to check 
+	 bytes loaded or number of bytes in the buffer. 
+	 	 <p>Dispatched only for a progressive HTTP download. Indicates progress in number of 
+	 downloaded bytes. The event object has the <code>bytesLoaded</code> and <code>bytesTotal</code>
+	 properties, which are the same as the FLVPlayback properties of the same names.</p>
+	 
+	 <p>The <code>progress</code> event is of type VideoProgressEvent and has the constant 
+	 <code>VideoProgressEvent.PROGRESS</code>.</p> 
+	 
+	 </p>
+     Defines the value of the <code>type</code> property of a <code>progress</code> event object.
+	 
+	 <p>This event has the following properties:</p>
+	 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>bytesLoaded</code></td><td>The number of items or bytes loaded at the time the listener processes the event.</td></tr><tr><td><code>bytesTotal</code></td><td>The total number of items or bytes that will be loaded if the loading process succeeds.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+	 <p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#bytesLoaded" target="">bytesLoaded</a><br/><a href="VideoPlayer.html#bytesTotal" target="">bytesTotal</a><br/><a href="VideoProgressEvent.html#PROGRESS" target="">VideoProgressEvent.PROGRESS</a><br/><a href="VideoPlayer.html#progressInterval" target="">progressInterval</a></div></div><a name="event:ready"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ready</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/VideoEvent.html"><code>fl.video.VideoEvent</code></a><br/><span class="label">VideoEvent.type property = </span><a href="../../fl/video/VideoEvent.html#READY"><code>fl.video.VideoEvent.READY</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Event dispatched when an FLV file is loaded and ready to display. It starts the first 
+	 time you enter a responsive state after you load a new FLV file with the <code>play()</code>
+	 or <code>load()</code> method. It starts only once for each FLV file that is loaded.
+	 
+	 <p>The <code>ready</code> event is of type VideoEvent and has the constant 
+	 <code>VideoEvent.READY</code>.</p> 
+	 
+	 </p>
+         Defines the value of the <code>type</code> property of a <code>ready</code> 
+		 event object. 
+         
+         <p>This event has the following properties:</p>
+         <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td></tr><tr><td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+         
+         <p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#load()" target="">load()</a><br/><a href="VideoPlayer.html#play()" target="">play()</a><br/><a href="VideoEvent.html#READY" target="">VideoEvent.READY</a></div></div><a name="event:stateChange"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stateChange</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/VideoEvent.html"><code>fl.video.VideoEvent</code></a><br/><span class="label">VideoEvent.type property = </span><a href="../../fl/video/VideoEvent.html#STATE_CHANGE"><code>fl.video.VideoEvent.STATE_CHANGE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched when the playback state changes. When an <code>autoRewind</code> call is 
+	 completed the <code>stateChange</code> event is dispatched with the rewinding
+	 state. The <code>stateChange</code> event does not 
+	 start until rewinding has completed. 
+	 
+	 <p>This event can be used to track when playback enters or leaves unresponsive 
+	 states such as in the middle of connecting, resizing, or rewinding. The  
+	 <code>play()</code>, <code>pause()</code>, <code>stop()</code> and <code>seek()</code> 
+	 methods queue the requests to be executed when the player enters
+	 a responsive state.</p>
+	 	 <p>The <code>stateChange</code> event is of type VideoEvent and has the constant 
+	 <code>VideoEvent.STATE_CHANGE</code>.</p>
+	 
+     </p>
+         Defines the value of the <code>type</code> property of a <code>stateChange</code> event object.
+         
+         <p>This event has the following properties:</p>
+         <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td></tr><tr><td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+         
+         <p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoEvent.html#STATE_CHANGE" target="">VideoEvent.STATE_CHANGE</a></div></div><a name="event:unsupportedPlayerVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unsupportedPlayerVersion</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../fl/video/VideoEvent.html"><code>fl.video.VideoEvent</code></a><br/><span class="label">VideoEvent.type property = </span><a href="../../fl/video/VideoEvent.html#UNSUPPORTED_PLAYER_VERSION"><code>fl.video.VideoEvent.UNSUPPORTED_PLAYER_VERSION</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	 Dispatched when the playback encounters an unsupported player feature. When a connection is 
+	 attempted and fails due to an unsupported player feature, the <code>unsupportedPlayerVersion</code> 
+	 event is dispatched.
+	 	 <p>The <code>unsupportedPlayerVersion</code> event is of type VideoEvent and has the constant 
+	 <code>VideoEvent.UNSUPPORTED_PLAYER_VERSION</code>.</p>
+	 
+     </p>
+         Defines the value of the <code>type</code> property of a <code>unsupportedPlayerVersion</code> 
+		 event object.
+         
+         <p>This event has the following properties:</p>
+         <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td></tr><tr><td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td></tr><tr><td><code>vp</code></td><td>The index of the VideoPlayer object.</td></tr></table>
+         
+         <p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoEvent.html#UNSUPPORTED_PLAYER_VERSION" target="">VideoEvent.UNSUPPORTED_PLAYER_VERSION</a></div></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="SHORT_VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">SHORT_VERSION</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const SHORT_VERSION:String = 2.5</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	State variable indicating the short version number of the component.  
+	The version number is useful when you have a FLA file and need to know the component version.
+	To determine the component version, type the following code trace into the FLA file:
+	
+	<div class="listing"><pre>FLVPlayback.SHORT_VERSION</pre></div>
+	
+	<p>The <code>SHORT_VERSION</code> variable includes only the major 
+	and minor version numbers, for example, 2.0. The <code>VERSION</code> variable includes 
+	the major and minor version numbers as well as the revision and build numbers, 
+	for example, 2.0.0.11.</p>
+	
+    </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#VERSION" target="">VERSION variable</a></div></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 2.5.0.6</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9.0.28.0</td></tr></table><p></p><p></p><p>
+	State variable indicating the long version number of the component.  
+	The version number is useful when you have a FLA file and need to know the component version.
+	To determine the component version, type the following code trace into the FLA file:
+	
+	<div class="listing"><pre>FLVPlayback.VERSION</pre></div>
+	
+	<p>The <code>VERSION</code> variable includes 
+	the major and minor version numbers as well as the revision and build numbers, 
+	for example, 2.0.0.11. The <code>SHORT_VERSION</code> variable includes only the major 
+	and minor version numbers, for example, 2.0. </p>
+	
+    </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VideoPlayer.html#SHORT_VERSION" target="">SHORT_VERSION variable</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Tue Jan 6 2009, 05:36 PM -08:00  </center></div></body></html><!--<br/>Tue Jan 6 2009, 05:36 PM -08:00  -->

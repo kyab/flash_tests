@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+ creationComplete="creationCompleteHandler();"
+ width="300" height="200">
+	<!--<mx:Button id ="myButton" label = "I'm a button!"/>-->
+	<mx:Script>
+		<![CDATA[
+			import flash.utils.Timer;
+			import flash.events.TimerEvent;
+			import mx.controls.Button;
+			import mx.controls.TextArea;
+			import mx.events.FlexEvent;
+			
+			
+			private var myButton:mx.controls.Button;
+			private function creationCompleteHandler(): void
+			{
+				myButton = new Button();
+				myButton.label = "I'm a button!";
+				myButton.addEventListener(FlexEvent.CREATION_COMPLETE,
+					buttonCreationCompleteHandler);
+				addChild( myButton );
+				
+				var t : TextArea = new TextArea();
+				t.text = "hogehoge\nho";
+				addChild(t);
+				var tim:Timer = new Timer(1000);
+				tim.addEventListener(TimerEvent.TIMER, function(evt:TimerEvent):void {
+					t.x = t.x + 10;
+				});
+			}
+			
+			private function buttonCreationCompleteHandler(evt:FlexEvent) : void
+			{
+				myButton.x = parent.width/2 - myButton.width/2;
+				myButton.y = parent.height/2 - myButton.height/2;
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

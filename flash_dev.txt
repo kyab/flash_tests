@@ -1,0 +1,716 @@
+ボタンがつくれて、ほんの少しモチベーションが上がる。
+
+最初の版を２月中めどにリリースしたいなぁ。
+夏までにはiPhoneから使えるようにしたい。
+
+
+■日記
+	□2009/11/27
+ ようやくマイクの使い方がわかってきた。
+ ループバックか、streamにアタッチしているときじゃないと、レベルが確認できない。
+ 実際に録音したものを外部（ループバックか、あるいはstream）へ出力するとき以外は
+ 実際にはアクティブにならない模様。
+ 
+ もう少しつめても良いが、ループバックでもstreamでも、遅延は結構大きい。
+ Mac上のliveではかなり遅延をつめて、演奏に気にならない程度にはリアルタイム性上げられるが、
+ FMSではそう簡単にいかなさそうだ。
+ 設定ファイルなどをつめていくことはできそうだが、Flash内部のマイクバッファ遅延があるからなぁ。
+ 
+ Skypeの遅延などについても調べたかったが、正直よくわからん。
+ だいたい、pingで遅延があるのだから、当然その他データについてもある程度の遅延はあると考えておいた
+ 方がよさそうだ。www.google.co.jp へのpingは20ms程度。
+
+	□2009/11/28
+
+ VCL Playerにて、FMSのサンプル（Feature ExplorerのRecord Streamアプリケーション）
+ で録音・録画したデータがちゃんと再生できることを確認。（Codecに関しては気にしていない）。
+ 　⇒つまり、コーデックなどをきちんと選べば、自前でサンプルの解析ができるはず。
+ 　　(VCL Playerが内部でFlashを呼び出しているだけだとOutだが、それは無いと祈りたい。)
+ 
+自前アプリにて、録音自体は成功しているように思えるが、なぜかサーバ上にファイルが残っていない。
+よくみてみると、FMSのサンプルでもデータは残っていない。　サーバ側スクリプトをいじる必要があるのか？？
+
+多分何とかなるはずだから、そこをクリアして、DTMソフト的なものをなんとか作って、それからリアルタイム性の追求が
+できれば良いかなぁ。
+
+⇒サーバ側スクリプト、サンプルの確認をして、録音したものを永続的なデータにする方法を知りたい。
+ ⇒！！できた。サンプルはサーバ側でサンプルを消していたことが原因。自前アプリの場合は、Application.xmlで
+ 保存する場所の設定がおかしかった。
+ <Application>
+	<StreamManager>
+		<VirtualDirectory>
+              <!-- Specifies application specific virtual directory mapping for streams.   -->
+			<Streams>/;${LIVE_DIR}</Streams>　※ここで変な場所を指定していた。
+		</VirtualDirectory>
+　　　・・・
+ 
+ 
+ しかし今度はCodecがサポートされていないとVCLで出てしまう。
+  ⇒結局Speexだと上手くいかないみたい。フリーなコーデックのはずなのに・・。
+   ⇒VCL PlayerはSpeex対応しているはず。だめなのはビット数が高すぎるから？
+ 
+さすがにこれだけ毎日見ていると、ActionScript自体にはだんだん慣れてきた。
+でもこれ以上やろうと思うと、ある程度まともなボタン、チェックボックス、リストコントロールが欲しいなぁ。
+
+
+VCL Playerのソースコードをざっと見た。
+大きすぎて疲れた。基本的にプラグインアーキテクチャっぽい。
+　コーデックはaccessプラグイン？DirectSound/MMCなどのはoutput系？　まぁとにかく大変だが、どこかで
+　何とかしてflvファイルを再生しているはず。
+
+
+	□2009/12/27
+  シンプルなボタンを作るのを試してみた。それなりのものがなんとかできそう。面倒だなぁ。
+  (MyButtonプロジェクト)
+  
+  実装にはSimpleButtonを使った。それなりに自前描画。描画方法はなんとなくわかった。
+  
+	□2009/12/31
+  SimpleButtonの継承で嵌る。クラス化したら全然描画されない。
+  with()構文中の変数名のスコープで嵌る。
+  	private function borderdRect(_width:uint, _height:uint, 
+												_color:uint, _borderWidth:uint):Sprite {
+			var sprite:Sprite = new Sprite();
+			with (sprite) {
+				graphics.beginFill(_color);
+				graphics.drawRect(0, 0, _width, _height);
+				trace(_width, _height, "hoooh");
+				graphics.endFill();
+				graphics.lineStyle(_borderWidth);
+				graphics.lineTo(_width, 0);
+				graphics.lineTo(_width, _height);
+				graphics.lineTo(0, _height);
+				graphics.lineTo(0, 0);
+			}
+			return sprite;
+		}	
+	このコード中のwidthとheightがspriteのwidthとheightを見に行く模様。そりゃそうか。
+
+	□2010/01/02
+  録音と再生をするアプリケーションができた。タイムラインに沿って、録音、再生できるものが欲しいな。
+  
+	□2010/01/05
+  AdobeからFLVPlaybackコンポーネントライブラリをダウンロードした。
+  これでflvの単純再生は万端？？
+  
+  myns.onMetaData = function(info:Object) {
+        totalTime = info.duration;
+    };
+  にてFLVのサンプルの合計時間は取得できそうだ。
+  
+  http://www.paw.hi-ho.ne.jp/milbesos/help/contents/hugflash/prologe.html
+  というツールでｆｌｖからの生データ抽出ができそう。
+  
+  コーデックについてこんな情報あり。SPEEXにする方法も載っている。
+  http://www.noridon.net/weblogs/archives/2008/11/flash_player_10_4.html
+  
+  	connection = new NetConnection(); 
+	connection.connect(null);
+	stream = new NetStream(connection);
+	video.attachVideo(stream); 	
+	stream.setBufferTime(10); 
+	stream.play('http://localhost/mystream.flv');
+  上のコードで、直接URLからｆｌｖが再生できるぽい
+  
+  ScrollViewの実装、途中まで、なぜかテキストフィールドが上手くスクロールしてくれない！！
+  mx使ったほうがいいの？？
+  
+	□2010/01/06 
+   Silverlight4のマイクサポートについて調べてみたところ、
+   どうやらCamera/Micの生データにはAudioSink::OnSample()でアクセスできる模様。
+   逆にサーバからきたデータをどうするかについては、よくわからない。MediaElementクラスがそれっぽいが、
+   生データ配列からの再生というのは難しそうだ。
+   ただ、Object Modelがやや何回
+   
+   
+	□2010/01/07
+    誕生日
+    ScrollViewのサンプルにてTextFieldを曲りなりにスクロールさせることができた。
+    マウスホイールやTextFieldの実際のサイズに合わせることになかなか到達しない。
+    
+	□2010/01/08
+    Naclには生音を出すためのインターフェイスがある。
+    サーバからの音のデコードをx86でできるかもしれない。　ActionScriptへの移植なしに。
+    
+    FMSで録音+Naclでデコード+再生。。って結構いけるんじゃまいか？ JavaScript経由で生データを遅れればいいじゃん。
+    
+    Nacl実行モジュールがGoで書けるようになる模様。2009/11月の記事
+    http://japan.cnet.com/special/story/0,2000056049,20403603-2,00.htm
+    
+    
+    Hugflashというツールでflv(Nellymoser)から音声デコードできることを確認(Nelly Morser)。ログファイルを見れば
+    色々わかる感じ。speexもできそう。つまり、やはり自前での実装はできるということ。
+    
+    やっとFlexとFlashの違いがわかった。
+    mxが使えるのはFlex。
+    FlexではMXMLでUIを記述する。flashパッケージに加えて、ボタンとか、textareaとか超あっさり使えた。。
+    （ただし、アプリケーションのサイズはかなり大きくなった)
+    
+    MXMLとActionScriptをコンパイルした結果は結局swfになる。MXMLは一旦Action Scriptに変換されて、その後
+    swfにコンパイルされる。ちなみに変換したAction Scriptのソースコードは--keep-generated-actionscript
+    をつけることで参照可能。
+    
+    http://blog.mynet.co.jp/hirashima/2008/04/adobe_flex_sdk.html
+    https://www.adobe.com/jp/devnet/flex/quickstart/coding_with_mxml_and_actionscript/
+    
+    
+    Flashは基本的にタイムラインベース。あるいはそれを無視してSpriteクラスをがんがん書いていく
+    こともできる（が、基本的にライブラリはFlexに比べると貧弱)
+    
+    Flexアプリケーションも、Flashアプリケーションも、結局のところswfになり、ブラウザ(またはStand Aloneのflash player）
+    で動作する。
+    
+    AirもMXMLで書く。ただし、こちらはデスクトップにランタイムのインストールが必要。
+    （ただ、このランタイムをインストールさせることの敷居はわりと低そうだ)
+    
+    Flex Builder/Flex SDKで、Flash(ActionScript3), Flash(MXML+ActionScript),Air全部書ける。
+    ・・となると、やはりmxパッケージをFlashアプリで使うことはできそうだが、ちょっと試した感じ、
+    なにも表示されなかった。
+       ⇒ mxを使うにはFlex Projectで、UIにMXMLを使って、ロジックをActionScriptで書く。mxパッケージが使える。
+    	flashを使うなら、ActionScriptプロジェクトで、UIから何から（Adobe Flash使えばタイムラインに沿った
+    	もっといい感じのができるはず。
+    
+    
+    http://www.adobe.com/devnet/logged_in/jchurch_flashplayer10.html
+    によるとFlash10では新しいSound APIが導入されており、
+    　　・生サウンドをbyte arrayで供給できる。
+    　　・mp3をデコードして、それを生データとして扱える。
+    Pixel Blenderを使うと、Effectとか使えるみたい。
+    SoundクラスにsampleDataイベント、そして、extractメソッドが追加されている。
+    
+    生データの出力
+    Soundクラスは、生データが欲しくなったらsampleDataイベントを投げてくるので、Byte Arrayでデータを生めてやればよい。
+    http://livedocs.adobe.com/flex/3/langref/flash/media/Sound.html
+    
+    MP3からの生データ抽出
+    Sound.extractを使えばmp3から生データを抽出できる。
+    手順としては、Sound.loadでmp3をロードして、Sound.extractで生データ抽出。
+    
+    上の生データの出力用のSoundクラスのインスタンスに埋めてやれば、生データを加工しつつ出力できる。
+    
+    Sound.loadでmp3以外のデータが取れるかは不明。しかし、FMSのストリームからの生データ抽出は無理っぽい。
+    まぁ、サーバ側でmp3に変換しておいてやれば結構できそう？
+    あと、wavをとってきて再生とかは余裕でできそうだ。
+    
+    えーと、もう一度まとめると、
+    　mp3をダウンロードして、生でいろいろ扱うのはできる。
+    　wavをダウンロードして、生でいろいろ扱うのはできるはず。
+    　flvをダウンロードして、生でいろいろ扱う方法は現段階不明。おそらく無い。
+    
+    Flash Player 10の普及率は日本で94.3% 9に比べると5%程低い。
+    http://www.adobe.com/products/player_census/flashplayer/version_penetration.html
+    
+    作りかけのScrollViewは何とか完成させちゃえそう。結局はTextAreaで完結しそうだけど。
+    
+	□2010/1/10
+    http://www.adobe.com/jp/devnet/air/articles/microphone_api.html
+    Air2.0ではMicrophoneクラスで生音声データがByteArrayとして取れる。
+    _mic.addEventListener(SampleDataEvent.SAMPLE_DATA, _dataHandler);
+    
+    ただ、Airだけで、Flashは無い模様。
+    
+    そういう意味ではSilverlightの方が一歩上か。
+
+　　ActionScriptの例を色々見てきたが、
+　　ActionScriptではプライベートメンバ変数の命名にはアンダースコアを使うのがよさそうだ。
+　　
+	□2010/1/11
+    結構いろんなサイトをみて疲れた。
+    TourDeFlexというAIRアプリをインストールして、いろんなサンプルを見てみたが、やはり
+    mxパッケージのUIが使えるのはかなり便利そうだ。特にListBoxとか
+    
+    Scrollバー付きTextFieldがとりあえず完成。
+    　横スクロールや上下ボタン対応ができていないけど、実用上困ったらまた考えるか。
+    　やっとSprite、特にhightやwidthの使い方がわかってきた。
+      Spriteは、何も中身が無い状態でheightやwidthを設定しようとすると0になってしまうので要注意！
+      SimpleButtonを使ってバリバリ作りこむのがきれいなUIをつくるコツかもしれない。
+    
+    mytraceの日付をもうちょっときれいなフォーマットにしたいな。 [hh:mm:ss:msmsms]
+    Timeのフォーマットエンジンが欲しいが、
+    　とりあえずは文字列生成でＯＫとしよう。
+    　　intを固定幅でフォーマットする方法があればよいが・・
+    　　あぁ、それらしきいい感じのがないや。もうとりあえず自作でいくか。
+    
+    
+    ここ数日悩んでいたが、波形データは表示は一旦後回しとして、
+    、４トラックＭＴＲを作ってみるか～。その後でSpeexのデコーダをdecodeして生データを扱い。
+    Soundクラスの
+    、他のユーザとの連携が一番難しいと思われるが、早くそこの試行錯誤ができるようになりたい。
+    Flash9対応は、その後でNellyMorserとか、、、
+    
+    波形表示や加工については、OggVorbisのデコーダを作った人がいるので、参考になりそう。
+    ちなみに、Haxeで書いてFlashのバイトコードに変換したとのこと。
+    
+    
+    Aplication  Model 
+    Session - 1Song - 4*track -
+    track *sounds-startTime : soundの命名はstarTime, slj soundの種類はFLV(MicspクラスとNetSteream
+    Song - currentPositio
+    track - recordOn
+    track - mic
+    
+    Song.startRecording
+    Song.startPlaying
+    Song.stop
+    
+    Modelのテストには適当なUnit Test Framewotkが使えそうだ。
+    
+    soundの再生にはFLVPlayback.swcが使えるかもしれない。(NetStraemクラスにはあらかじめロードする手段がないため）
+    
+
+	□2010/01/03
+    　alchemyというAdobeの研究プロジェクトでC/C++のコードからFlashランタイムで動作するモジュールを生成できる模様。
+    　これは使える！ がんばればflv(with speex)からwavへデコードして、後は自由自在。
+    　amachang!さんが試していた。
+    　http://d.hatena.ne.jp/amachang/20081118/1227005285
+    　
+    　Flash Liteは今のところVer1.1を使うのが無難な様子。
+    　http://thinkit.jp/article/734/1/
+    　
+    　どこまで、何が使えるかはかなり疑問だが・。
+    　
+    □2010/01/21
+      ActionScript3では、１ファイルにつき、外部からみえるクラスは一つしか定義できない。
+      http://d.hatena.ne.jp/nitoyon/20070116/p1
+      内部クラスはパッケージ外における。
+	
+	□2010/01/31
+    　RecButtonに引き続き、DropDownListを作ってみる。
+    　結構いい感じにできそうだ。うまくイベントモデルを作成できれば、それなりのものができそう。
+    　MXMLを使うほうが圧倒的に早いはずだが、使い方を調べるのが面倒。
+    　Sprite/SimpleButton/TextField/Shapeで大体のことはできちゃいそう。
+    　
+    　とりあえず、フォントの使い方がわかった。
+    　
+    　次は、、なんだろう、音量を示すGaugeだな。
+    　現在のvalueを設定できて、バックグラウンドの色と今の色を表示できればＯＫ．
+    　valueは0～100でいいでしょう。
+    　
+    　その次は値の設定をできるスライドバー。
+    　
+    　とりあえず、それなりに信頼できるものが作れたら、改善は後回しにして、どんどん作っていく。
+    　
+    　
+	□2010/01/31
+	  DropdownListが適当だが、動いてきた。
+	  とりあえず、次はGauge。その次はKnowだな。マウスで回転させられるやつ。
+	  
+	  
+モチベーションをあげるサンプルとして、
+　-Vaio/MacBookから　PublishされたAudioを聞けるか（PodXtからの出力を聞く)
+　
+　-USBカメラをもう一つ買ってきて、それをつなぐ。
+
+　
+
+□何を作る？？？
+　・ブラウザで動くでDTMソフト　⇒とりあえずこの線が有効かな。なんとかなりそうだ。
+　・同時録音にこだわる必要があるのか？　
+　　⇒遅延の解決には長い時間がかかりそうだ。テーマとしては面白いが、、
+　　そもそも生のUDPやりとりでどれくらい遅延があるのかもわからんし。
+　
+□TODO
+	1)カメラとオーディオのチャットアプリ
+	　自前クライアントと自前サーバアプリを作って練習
+	　　HelloFMS(Serverとコネクションを張って、いろいろ実験)
+	　　  自前クライアント、自前サーバ間の接続ができることを確認した。
+	　　   -○接続
+	　　   -○サーバからのクライアント関数呼び出し○
+	　　   -　　　　　　　　　　　　　　　　　　　　with 引数
+	　　   -                                        with 引数＆返り値
+	　　   -クライアントからのサーバ関数呼び出し
+	　　   -                                        with 引数
+	　　   -                                        with 引数＆帰り値
+	　　 　-○切断
+	　　 リファレンス見て本格的にどう動くのか見ておく必要有り。
+	　　 
+	　　Video
+	　　	○Publish
+	　　	○Subdcribe
+	　　	　live配信の遅延はほとんどないように見える。
+	　　Audio
+	　　	○Publish（とりあえず動いた）
+	　　	　-Audio関係を扱うプロジェクト作ってみる？
+	　　	○Subscribe（とりあえず動いた)
+	　　	
+	　　	　⇒遅延が結構あるが、調整方法がよくわからない。
+	　　	　　CodecはMic.codecで変更可能のようだ。
+	　　	　　Stream/Application.xmlのそれらしき項目をいじるも、いまいちよくわからない。
+	　　	　Videoの方が早い（遅延が小さい)ように思える。
+	　　
+	　　Record
+	　　  まずテキストボックスとボタンが欲しい！！ --nono! Flexでmxライブラリ使えば解決！
+	　　  
+	　　  □ボタンを作成中（クラス化までもう一歩）
+	　　  □テキストボックス
+	　　
+	1.2)GUI操作色々
+	　　・ボタン(どこにボタンが使えるのかさっぱりわからん/Flex_SDKについてきているような気はするが・・・。)
+	　　・スクロールボックス
+	　　・描画
+	　　・色、テキスト操作
+	　　・タイマー処理
+	　　・その他？？
+	　　
+	1.5)パフォーマンスの測定、チューニング
+	　・遅延の設定や、限界の見極め
+	　・ビデオ、オーディオの品質・エんコーディング設定方法確認。
+	  ・farファイル（サーバスクリプトの圧縮版)を試してみる？
+	  
+	  　
+	2)コメント共有
+	
+	仕様：
+	  ・ブラウザだけでジャムに参加できる。
+	  ・視聴Only+コメント⇒参加というピラミッド階層
+	  ・そこそこちゃんとみれる演奏の同期
+	　・ビデオ、オーディオ入力を確認（設定）できること。
+	　・デフォルトで視聴モード
+	　・参加モードにすると、カメラかオーディオで参加できる。
+	　・ダウンロード（ユーザ側でなんとかするだろうから、必須ではない）
+	　・
+	3)公開：多人数チャット.
+	  (BPM付き？）
+	  
+	  Ver0.8 コメント共有
+	  Ver0.9 スコア共有
+	  Ver0.91 みんなで録音
+	  
+	4)VerUp
+	　　・Effector plug-in対応 VST/VST-i相当。JavaScriptで書かせる？Nacl?クラウド側？
+	　　・なんか色々サウンドサンプルを作って、再生させる拡張可能なコンポーネントを使えそうだ。
+	　　・音声/Videoのアップデート対応
+	　　・Live/Cubase/Sonarなどからのプロジェクトインポート対応
+	　　
+	  Nativeアプリ or プラグイン or Google Native Client/ Java Applet/FLEX/その他RIA
+	   
+	  iPhone対応
+	  Android対応
+	  Chrome OS対応
+	  スコア共有(Google Wave)
+
+制約：
+　・端末を選ばない、かつ各端末の持つ特異性を殺さないシステムとする。
+　　端末の特異性：
+　　　.iPhoneカメラ/Mic
+　　　.VST/VST-i(Windows/Mac), Rewier
+　
+　・他システムとの融合
+　　・Twitter
+　　・facebook上のアプリケーション
+　　・
+  
+  具体的な端末/プラットフォーム
+　　・iPhone
+　	・OS Nativeアプリケーション(Windows/Mac Native)　最高スペック
+　	　　
+　サーバもAdobe純正FMSを必ず使う必要なし。
+　　・オープンソースのRMTP実装も有り。とりあえず今のDev Versionで物足りなくなったらRubyなどのオープン実装を探す。
+　　・その他あるいは独自プロトコル実装もあり。
+　　・スクリプトもたぶんRubyなどで書ける。
+　
+
+□SDKのみを使った開発系記事
+　http://gihyo.jp/dev/feature/01/flash-sdk/0001
+　
+□ActionScript入門
+　
+　@IT(純粋に言語的な部分だけ？)
+　 http://www.atmarkit.co.jp/fwcr/index/index_as3.html
+　
+　Hello World的な例
+　　http://labo.iix.co.jp/?p=1074
+　
+　プレゼン(ステージやMovieClip)
+　  http://yoppa.org/ssaw08.php?itemid=831
+　  
+　 Adobe:ActionScriptのコレクションと関数プログラミング
+　  http://www.adobe.com/jp/devnet/flex/articles/as_collections.html
+　  
+　 プロトタイプ
+　 　コンパイラオプションでStrictを外せば、dynamic宣言されていないクラスでもprototypeに追加できる。
+　 　http://www.adobe.com/jp/devnet/flex/articles/as_collections_03.html
+　 　
+　 　ActionScriptのオブジェクト指向
+　 　http://livedocs.adobe.com/flash/9.0_jp/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000069.html
+
+
+    メタタグ([SWF(backgroundColor="#ffffff", frameRate="25",width="600",height="200" )]見たいなやつ。
+   >http://memo.kappa-lab.com/2008/03/as3swfmemo.html
+   
+   http://blog.air-life.net/2008/05/flex.html
+   
+   イベント
+    AS2とAS3両方についてよくわかりそう。
+    http://www.adobe.com/jp/devnet/actionscript/articles/event_handling_as3_02.html
+
+
+□リファレンス
+　★http://www.adobe.com/support/documentation/jp/flex/
+　
+　Flash Playerガイド（管理者ガイド)
+　http://www.macromedia.com/support/documentation/jp/flashplayer/help/help04.html
+　
+□FMS情報
+  リンク集 http://www.jamboree.jp/cms/archives/31
+
+  http://www.itmedia.co.jp/enterprise/articles/0502/15/news008_2.html
+  古いけどチュートリアル
+  
+  ★公式ドキュメント集 
+  http://www.adobe.com/support/documentation/jp/flashmediaserver/  
+  
+  
+  サンプルコード集：
+  http://dev.convexstyle.net/2008/03/h264_flash_media_server_3_stre.html
+  http://blog.hereticsintheworld.com/91.html
+  
+  
+  RMTPなどFMS関連プロトコル・フォーマットのリバース情報。
+  http://osflash.org/documentation/
+  
+  http://www.adobe.com/devnet/rtmp/ RMTP公式
+  
+  http://osflash.org/flv　FLVについてosflashから
+  http://ja.wikipedia.org/wiki/Flash_Video
+  　⇒勝手クライアントからでもV6でエンコードすればＯＫ？
+  　
+□FMS開発メモ
+  ・サーバ側はActionScript2で書いて、applicationフォルダに突っ込む。サンプルが参考になる。
+  ・サーバには山ほど設定項目がある。
+    ビデオの遅延は、とりあえずApplication.xml/StreamManager/Live/Queueでenable = false
+    にすることで無くなった。
+  ・サーバ側はコンパイルとか不要みたい。サンプルで付いてくるサーバ側アプリ(farファイル)は、単に
+	スクリプトファイルを圧縮したもの。
+　・RecordするにはNetStreamのPublish(第２引数に"record"）をつかう。	
+　　http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/NetStream.html#publish()
+　　
+　　Recordされるのは・・・
+  　
+□FMSホスティングサービス/FMSサーバ(Adobe純正以外)
+	Adobeの提供しているFMS Developer Editionは接続数が限られているので、他の実装が必要。
+
+  　http://heteml.jp/service/
+  　Red5(おーぷんそーすのFMSサーバ)
+  　Google App Engineでも動かせる？？
+  　　http://www.moongift.jp/2009/01/flash_and_flex-on_google_app_engine/
+  　
+  　・Pythonで作っている人もいるみたい。
+　　・RubyでRMTPサーバ作っている人もいる。
+　
+□録音・録画
+　　方法がワカラン。NetStream.Publish(hoge,"record");で上手くいっているようだが、何もサーバに残らない。
+　　サンプルでもファイルが残っていないし・・。なんでだ？
+□Audio(Microphone)
+	□スペック
+	　・コーデックで２種類が選べる。
+	　・波形編集はhttp://cs3book.flashoop.jp/wiki/index.php?AS3で扱うサウンド#vbf0d9f8
+	　にいろいろ情報がまとめられているので、波形表示など、かなりのことができそうだ。
+	　
+	□マイクの取得
+		Microphone.getMicrophone()でデフォルトのマイクを入力。
+	
+	□マイクへのアクセス許可
+		Cameraの場合と異なり、Microphone.getMicrophone()だけでは
+		セキュリティパネルは表示されないようだ。
+	
+	　　-setLoopBack(true)を呼び出さないとセキュリティパネルが表示されない。
+	　　-Security.showSettings(SecurityPanel.PRIVACY)でもパネルは表示されるが、その後の処理が一向に進まない
+	　　　　⇒進んだ。
+	    -しょうがないのでsetLoopback(true)しておいて、（ループバックさせたくない場合はそのSoundTransformを0に。
+	    　⇒しても何故かループバックが・・。
+	    -MicrophoneのSoundTransformは直接操作できないので、新しいSoundTransformオブジェクトをセットする必要が
+	     あるようだ。
+	     
+	     
+	     どうも挙動がよくわからん。setLoopBack(true)するか、attachAudioされているときじゃないと、マイクのレベルが全然わからん。
+	     実際に何か(loopbackモードか、またはstream)に出力されているときじゃないと、まともに動かないようだ。
+	     
+	     接続してないとき:setLoopback(true)でsoundTransformを0にしておくことで、モニタを観察できるようにする？
+	     接続しているとき：setLoopback(false)にする。　ボタン/テキストフィールド/コンボボックスが欲しいなぁ。
+	
+	リファレンス：
+	
+	　サウンドの操作：
+	　http://livedocs.adobe.com/flash/9.0_jp/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000284.html
+	　
+	　マイククラス(flash.media.Microphone)：
+	　http://livedocs.adobe.com/flash/9.0_jp/ActionScriptLangRefV3/flash/media/Microphone.html#rate
+	　-setLoopBack(true)でローカルにループバック（遅延の設定方法は不明)
+	　-setUseEchoSuppression(true)でエコー抑制
+	　-rateでサウンド周波数の設定(最大は44.1kHz)。
+	　-Channelは2チャンネルまでの模様。しょうがないな。
+	　-音量がある程度小さくなると、検知しなくなる。setSilenceLevel(0,-1)で
+	　 常に検知状態にしておける。
+	　 
+
+　　　この辺を見た感じでも、どうやらバグもちっぽい setSilenceLevelもたぶん無茶苦茶間違っている。
+　　　http://www.trick7.com/blog/2007/12/03-104946.php
+　　　
+　　　NetStreamにもSoundTransformがあるが、これは・・Subscribe用？？
+	　
+	　
+	　SilverLightでもMicrohpneサポートがあるみたい。
+	　http://channel9.msdn.com/learn/courses/Silverlight4/MagicMirror/
+	　
+□Audio(波形関係)
+	http://cs3book.flashoop.jp/wiki/index.php?AS3で扱うサウンド#vbf0d9f8
+	AS3のサウンドあれこれ。DTM的なソフトを作っている人がいるみたい。
+	
+	
+□FlashDevelopの設定
+　日本語ドキュメントを参照させる
+　  Tools-Program Settings-AS3ContextのDocumentation ComanndLineのgoogle検索を
+　  comからjpに。
+
+traceのアウトプットを確認する
+
+　http://www.flashdevelop.org/wikidocs/index.php?title=Configuration#ActionScript_3_configuration
+　か
+　http://aquioux.blog48.fc2.com/blog-entry-380.html
+　からたどったhttp://gihyo.jp/dev/feature/01/flash-sdk/0001?page=3　がわかりやすい。
+　
+　まとめると、
+　　・デバッグ版のプレイヤーはSDK内のruntime\以下に存在している。
+　　　(Adobeサイトから最新を落とすことも可能)
+　  ・その設定はmm.cfgファイル（ログを出すかどうかや、ログファイルのパスをデフォルトから変更できる)
+　    設定項目は多くないが、本家のページに説明がある（http://livedocs.adobe.com/flex/3_jp/html/help.html?content=logging_04.html）
+　  
+　  ・FlashDevelop側では、プロジェクトの設定でExternal Playerにして
+　  ・Tools - Program Settingsの中からFlashViwerにプレイヤーのパスを指定できるので、ここでデバッグ版を指定
+　  ・必要があれば、FlashLogViwerのログファイルもmm.cfgと合わせるとよいが、デフォルトでmm.cfg側のデフォルトログファイルパスとあっているはずなので設定は不要ぽい
+　  　(どちらも、C:\Documents and Settings\koji\Application Data\Macromedia\Flash Player\Logs\flashlog.txt）
+　  FlashDevelopはデバッグ版プレイヤーが吐き出したログファイルを読み込んで、IDE内に表示しているようだ。
+　  
+複数起動可能にする。
+  C:\Program Files\FlashDevelopに.multiというファイルがあれば複数起動するようだ。
+  　参考:http://d.hatena.ne.jp/foldrr/20091001/p5
+       　http://www.flashdevelop.org/community/viewtopic.php?f=9&t=2539
+       　
+
+	  
+□サーバ側でのTrace
+	なぜか時々しかサーバ側のtraceによるログが表示されない。なんで？
+	とりあえずlogフォルダにそれらしきファイルは記録されているようだが・・。FF
+	
+□rascut
+　rascut -s hogehoge.asでasをコンパイルした結果のswfをブラウザで表示できる。
+　rascutはasファイルの更新を監視しており、ソースが更新されるとすぐにコンパイルして、ブラウザが
+　自動的にリロードされる。
+　
+　デフォルトのサーバアドレスはhttp://0.0.0.0:3001/ -pでポートは変更可能。
+　
+	□インストール
+　	gem install rascutでインストール
+	依存するmongrelはmswin32版を使った。
+　
+　	rascut -s <file.as>でファイル変更監視＋localhost:3001にアクセスで自動リロード。
+　
+　	rascutはコンパイルにmxmlcを呼び出しているので、
+　	flex_sdk\binにパスを通しておく必要あり。
+　
+　	参考：
+　	http://d.hatena.ne.jp/nitoyon/20070914/how_to_install_rascut
+　	
+　	よくわからんが、rascut -s -c "-load-config+=obj\RecButtonConfig.xml" src\Main.as で
+　	コンパイルできそう。-cはmxmlcに渡すコマンドラインオプション
+　	**Config.xmlの中にソースパスとかが入っている。
+　	
+　	traceを出力する方法がわからん。
+
+□課題
+	□コーデックをオープンにできるか？(iPhoneなども考えて)
+	 コーデックの種類が多すぎて、意味がわからない。
+	 Wikipedia等などをみて、フリーで使えそうなものがあるか物色しておく
+	 h246はフリーで使えそう。なんとかなるかぁ。
+	 
+	 WilipediaのFLV,container format, 対応してるプレイヤをみていくと
+	 概要がつかめそうだ。
+	 
+	■Server Sideスクリプトの開発環境
+	  Flexなしでやれるか？⇒やれる。ActionScript2で書いたファイルをapplicationフォルダ内に適当なアプリフォルダを作って、main.ascとして
+	  入れておくだけ。
+	  Red5ではサーバサイドはJavaで書く。	
+	
+	□traceがなぜか動かない場合がある。何か設定必要？？？
+	  
+	□rascutとFlash Player,htmlでサイズが違う！
+	 
+	■ビデオを許可する方法がわからない
+		⇒ローカルファイルだと、何故か上手くカメラが表示されなかったが、
+		それは他のカメラが選ばれていたからだった。Flashコンテンツの右クリックで
+		カメラを選べた。
+		どうも、以前Google Talkチャットか何かをインストールした際に、カメラデバイスのデフォルトが
+		（ブラウザの場合だけ？）Google Camera Adapterになってしまったようだ。
+	 
+	□簡単なボタン
+	□fl.controls.button等を使う方法がわらかない。
+	　あまり調べていないが、http://www.flashdevelop.org/community/viewtopic.php?t=2457にある
+	　方法を使えば確かに使えているが、でもだめ。
+	　FlashDevelop以下のlibraryにそれらしきクラスがあるのだけれどなぁ。。
+	　
+	　最初からプロジェクトをFlexで作ればいいのか。
+	  でもここ(http://www.flashdevelop.org/community/viewtopic.php?f=13&t=4344)とかみると
+	  難しそうだなぁ。
+	  
+	  c:\fles_sdk3以下をみると、それらしきファイルはあるのだけれど・・。
+	  ⇒flash.display.SimpleButtonは使える。ただし使い方がよくわからない。
+	  　⇒何も表示されない。
+	  　
+■ライブラリのメインなところ
+　MovieClipかSpriteをメインクラスにする。
+　MovieClipはタイムラインの概念があるクラス。
+　　gotoFrameで他のフレームにジャンプしたり、一時停止したりnextFrameしたりできる。
+　　
+　Spriteにはタイムラインの概念はない。
+　
+　主要なイベント
+　　グラフィックオブジェクトはマウスクリックやENTER_FRAMEなどのイベントを持つ。
+　　
+　
+■イベントリスナ
+　無名関数で登録したリスナは、イベントハンドラ内でarguments.calleeを使って削除できる。
+	camera.addEventListener(ActivityEvent.ACTIVITY,
+		function(evt:ActivityEvent):void {
+			...
+			
+			//一回目だけ欲しかったので、削除, arguments.calleeはこの無名ハンドラを示すので。
+			camera.removeEventListener(ActivityEvent.ACTIVITY,arguments.callee);
+		});
+
+　無名関数の中のthisは、外側のthisを参照できないようだ。クロージャじゃないの？
+　JavaScript/ActionScriptはthisに注意。
+
+■現在の関数名の表示
+	
+
+□サンプル
+　http://wonderfl.net/　いろんなスクリプト（描画系)
+　
+　
+□HTMLへの埋め込み/JavScript連携
+http://help.adobe.com/ja_JP/Flash/10.0_UsingFlash/WSd60f23110762d6b883b18f10cb1fe1af6-7bcca.html
+http://phpspot.org/blog/archives/2006/10/flashhtmljavasc.html
+http://www.adobe.com/jp/devnet/flash/articles/fp8_detection_06.html
+http://kb2.adobe.com/cps/415/tn_4150.html
+
+最終的にはFlashDevelopが出すように、FlashVarsを使うのが適切かと
+思われる。
+
+またはswfobject(JavaScriptライブラリ)
+http://code.google.com/p/swfobject/
+
+
+簡単な説明
+　
+　(プレゼン)
+　http://kyosuke.jp/portfolio/seminar/2006-04csslite/flash.html
+　
+　
+　(FlashVarsで変数を渡す)
+　http://www.fumiononaka.com/TechNotes/Flash/FN0901001.html
+　
+　FlashとJavaScriptのやりとりは本にも説明があったので、だいたいなんとかなるだろう。
+　
+
+・本やWebで何とか見つかりそう。
